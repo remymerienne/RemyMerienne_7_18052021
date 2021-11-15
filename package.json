@@ -1,0 +1,45 @@
+{
+
+  "name": "lespetitsplats",
+  "version": "1.0.0",
+  "description": "Projet N°7 du parcours Développeur Front-End OpenClassrooms.",
+  "main": "main.js",
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "sassindex": "sass stylesheets/index.scss css/index.css --watch"
+
+  },
+
+  "repository": {
+
+    "type": "git",
+    "url": "https://github.com/remymerienne/RemyMerienne_7_18052021"
+
+  },
+
+  "keywords": [
+
+    "Cuisine"
+
+  ],
+
+  "author": "Rémy Merienne",
+  "license": "ISC",
+
+  "devDependencies": {
+
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.18.0",
+    "eslint": "^7.32.0",
+    "sass": "^1.39.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+
+  }
+
+}
