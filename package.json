@@ -9,7 +9,7 @@
 
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "sassindex": "sass stylesheets/index.scss css/index.css --watch"
+    "sassindex": "sass stylesheets/main.scss css/style.css --watch"
 
   },
 
