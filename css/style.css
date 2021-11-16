@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+/*! minireset.css v0.0.6 - END */
+
+.high-group-recipe, .search-bar, .tags-row__tag, .buttons-row__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+*:focus {
+  outline: none;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 1440px;
+  padding: 42px 100px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.buttons-row__button {
+  width: 170px;
+  height: 69px;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tags-row__tag {
+  height: 37px;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__logo {
+  width: 50px;
+}
+.header__title {
+  padding: 5px;
+  color: #d04f4f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.search-bar {
+  height: 69px;
+  margin-top: 17px;
+  padding: 20px;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+}
+.search-bar__input {
+  width: 550px;
+  border: none;
+  background-color: #e7e7e7;
+  color: #000000;
+  font-size: 18px;
+}
+.search-bar__input::-webkit-input-placeholder {
+  color: #000000;
+  opacity: 0.25;
+}
+.search-bar__input::-moz-placeholder {
+  color: #000000;
+  opacity: 0.25;
+}
+.search-bar__input:-ms-input-placeholder {
+  color: #000000;
+  opacity: 0.25;
+}
+.search-bar__input::-ms-input-placeholder {
+  color: #000000;
+  opacity: 0.25;
+}
+.search-bar__input::placeholder {
+  color: #000000;
+  opacity: 0.25;
+}
+.search-bar__logo {
+  font-size: 32px;
+}
+
+.tags-row {
+  display: flex;
+  margin-top: 15px;
+}
+.tags-row__tag--ingredient {
+  background-color: #3282f7;
+}
+.tags-row__tag--device {
+  background-color: #68d9a4;
+}
+.tags-row__tag--utensil {
+  background-color: #ed6454;
+}
+.tags-row .fa-times-circle {
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.buttons-row {
+  display: flex;
+  margin-top: 20px;
+}
+.buttons-row__button--ingredient {
+  background-color: #3282f7;
+}
+.buttons-row__button--device {
+  background-color: #68d9a4;
+}
+.buttons-row__button--utensil {
+  background-color: #ed6454;
+}
+.buttons-row .fa-chevron-down {
+  font-size: 16px;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 364px;
+  margin-top: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.recipe__photo {
+  height: 178px;
+  background-color: #c7bebe;
+}
+.recipe__details {
+  height: 186px;
+  padding: 20px;
+  background-color: #e7e7e7;
+}
+
+.high-group-recipe__title {
+  font-size: 18px;
+}
+.high-group-recipe__time, .high-group-recipe__time::after {
+  font-size: 18px;
+  font-weight: 700;
+}
+.high-group-recipe__time::before {
+  margin-right: 7px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f017";
+  font-size: 20px;
+}
+.high-group-recipe__time::after {
+  margin-left: 5px;
+  content: "min";
+}
+
+.low-group-recipe {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.low-group-recipe__list {
+  width: 170px;
+  height: 100px;
+}
+.low-group-recipe li {
+  font-size: 12px;
+  font-weight: 700;
+}
+.low-group-recipe__task {
+  width: 170px;
+  height: 100px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+/* END */
