@@ -223,7 +223,7 @@ td, th {
 .recipe {
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 31%;
   height: 364px;
   margin-top: 25px;
   border-radius: 5px;
@@ -264,7 +264,7 @@ td, th {
   margin-top: 20px;
 }
 .low-group-recipe__list {
-  width: 170px;
+  width: 50%;
   height: 100px;
 }
 .low-group-recipe li {
@@ -272,7 +272,7 @@ td, th {
   font-weight: 700;
 }
 .low-group-recipe__task {
-  width: 170px;
+  width: 50%;
   height: 100px;
   font-family: "Roboto", sans-serif;
   font-size: 12px;

@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// * This file contains very basic layouts.
+// -----------------------------------------------------------------------------
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: 100%;
+  max-width: $page-max-width;
+  padding: 42px 100px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// * End
+// * ------------------------

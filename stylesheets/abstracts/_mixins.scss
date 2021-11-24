@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// * This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// ================MENU================
+// - 1. Media Queries
+// ====================================
+
+// - 1. Media Queries
+// --------------------------
+
+/// Mixins Media Queries Extra-small (min 375px)
+/// @access public
+/// @requires $breakpoints - Breakpoints map
+@mixin xs {
+  @media screen and (min-width: map-get($breakpoints, xs)) {
+    @content;
+  }
+}
+
+/// Mixins Media Queries Small (min 480px)
+/// @access public
+/// @requires $breakpoints - Breakpoints map
+@mixin sm {
+  @media screen and (min-width: map-get($breakpoints, sm)) {
+    @content;
+  }
+}
+
+/// Mixins Media Queries Medium (min 750px)
+/// @access public
+/// @requires $breakpoints - Breakpoints map
+@mixin md {
+  @media screen and (min-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+/// Mixins Media Queries Large (min 970px)
+/// @access public
+/// @requires $breakpoints - Breakpoints map
+@mixin lg {
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+
+/// Mixins Media Queries Extra-large (min 1187px)
+/// @access public
+/// @requires $breakpoints - Breakpoints map
+@mixin xl {
+  @media screen and (min-width: map-get($breakpoints, xl)) {
+    @content;
+  }
+}
+
+// * End
+// * ------------------------
