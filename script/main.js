@@ -1,3 +1,3 @@
-import { recipes } from './components/recipes';
+import { search } from './components/search';
 
-console.log(recipes);
+search();
