@@ -1,3 +1,3 @@
-import { recipes } from './components/recipes';
+import { searchByArrayMethod } from './components/SearchByArrayMethod';
 
-console.log(recipes);
+searchByArrayMethod();
