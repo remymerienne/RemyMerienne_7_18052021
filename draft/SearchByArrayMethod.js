@@ -53,8 +53,10 @@ export const searchByArrayMethod = () => {
         recipesFound.push(e.id);
       });
 
+      // Suppression des Id en double
       recipesFound = Array.from(new Set(recipesFound));
 
+      // Mise en ordre croissant des Id
       recipesFound.sort((a, b) => a - b);
 
       console.log(recipesFound);
