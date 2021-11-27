@@ -1,29 +1,32 @@
-// import { recipes } from '../../recipes';
+import {
+  recipes
+} from '../../recipes';
 
-// const formatString = (string) => {
-//   string = string.toLowerCase();
-//   string = string.replace(/[éèëê]/g, 'e');
-//   string = string.replace(/[îï]/g, 'i');
-//   string = string.replace(/[à]/g, 'a');
-//   string = string.replace(/[ç]/g, 'c');
-//   return string;
-// };
+const formatString = (string) => {
+  string = string.toLowerCase();
+  string = string.replace(/[éèëê]/g, 'e');
+  string = string.replace(/[îï]/g, 'i');
+  string = string.replace(/[à]/g, 'a');
+  string = string.replace(/[ç]/g, 'c');
+  return string;
+};
 
-export const searchByArrayMethod = () => {
+const userSearch = formatString('fra');
 
-  const uiNodeSearchBar = document.querySelector('.search-bar__input');
+const filterByName = (obj) => {
 
-  uiNodeSearchBar.addEventListener('keyup', e => {
+    if(formatString(obj.name).indexOf(userSearch) !== -1) {
 
-    // Lancement de la recherche au troisième caractère saisi
-    if (e.target.value.length >= 3) {
-
-      let recipesFound = [];
-
-      console.log(recipesFound);
+      return true;
 
     }
 
-  });
+};
+
+export const searchByArrayMethod = () => {
+
+  const recipesIdByName = recipes.filter(filterByName);
+
+  console.log(recipesIdByName);
 
 };
