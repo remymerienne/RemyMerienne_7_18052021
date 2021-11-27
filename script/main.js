@@ -1,3 +1,3 @@
-import { search } from './components/search';
+import { searchByLoop } from './components/SearchByLoop';
 
-search();
+searchByLoop();
