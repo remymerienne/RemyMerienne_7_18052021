@@ -9,9 +9,60 @@ const formatString = (string) => {
   return string;
 };
 
+const sortByName = (a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+};
+
+const test = (recipe) => {
+  let test = '';
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+    test += `
+      <p class="li">
+        ${recipe.ingredients[i].ingredient}
+        ${recipe.ingredients[i].quantity !== undefined ? ':&nbsp' : ''}
+        ${recipe.ingredients[i].quantity !== undefined ? recipe.ingredients[i].quantity : ''} 
+        ${recipe.ingredients[i].unit !== undefined ? recipe.ingredients[i].unit : ''} 
+      </p>`;
+  }
+  return test;
+};
+
+const displayRecipes = (uiNodeToinject, recipesFound) => {
+  uiNodeToinject.innerHTML = (
+    recipesFound.map(recipe =>
+      `  
+        <!-- = Block recette -->
+        <article class="recipe">
+          <div class="recipe__photo"></div>
+          <div class="recipe__details">
+            <div class="high-group-recipe">
+              <h2 class="high-group-recipe__title">${recipe.name}</h2>
+              <p class="high-group-recipe__time">${recipe.time}</p>
+            </div>
+            <div class="low-group-recipe">
+              <div class="low-group-recipe__list">
+                ${test(recipe)}
+              </div>
+              <p class="low-group-recipe__task">${recipe.description}</p>
+            </div>
+          </div>
+        </article>
+        <!-- = Block recette-END -->
+      `
+    ).join('')
+  );
+};
+
 export const searchByArrayMethod = () => {
 
   const uiNodeSearchBar = document.querySelector('.search-bar__input');
+  const uiNodeToinject = document.querySelector('main.main');
 
   uiNodeSearchBar.addEventListener('keyup', e => {
 
@@ -41,26 +92,25 @@ export const searchByArrayMethod = () => {
         }
       };
 
-      recipes.filter(filterByName).forEach(e => {
-        recipesFound.push(e.id);
-      });
+      recipes.filter(filterByName).forEach(e =>
+        recipesFound.push(e)
+      );
 
-      recipes.filter(filterByDescription).forEach(e => {
-        recipesFound.push(e.id);
-      });
+      recipes.filter(filterByDescription).forEach(e =>
+        recipesFound.push(e)
+      );
 
-      recipes.filter(filterByIngredient).forEach(e => {
-        recipesFound.push(e.id);
-      });
+      recipes.filter(filterByIngredient).forEach(e =>
+        recipesFound.push(e)
+      );
 
-      // Suppression des Id en double
       recipesFound = Array.from(new Set(recipesFound));
-
-      // Mise en ordre croissant des Id
-      recipesFound.sort((a, b) => a - b);
+      recipesFound = recipesFound.sort(sortByName);
 
       console.log(recipesFound);
-      
+
+      displayRecipes(uiNodeToinject, recipesFound);
+
     }
 
   });

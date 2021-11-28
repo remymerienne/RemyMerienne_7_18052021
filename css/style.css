@@ -122,7 +122,7 @@ td, th {
 .main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  column-gap: 2%;
 }
 
 .buttons-row__button {
@@ -223,7 +223,7 @@ td, th {
 .recipe {
   display: flex;
   flex-direction: column;
-  width: 31%;
+  width: 32%;
   height: 364px;
   margin-top: 25px;
   border-radius: 5px;
@@ -267,7 +267,7 @@ td, th {
   width: 50%;
   height: 100px;
 }
-.low-group-recipe li {
+.low-group-recipe .li {
   font-size: 12px;
   font-weight: 700;
 }
