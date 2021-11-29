@@ -19,10 +19,10 @@ const sortByName = (a, b) => {
   return 0;
 };
 
-const test = (recipe) => {
-  let test = '';
+const displayIngredients = (recipe) => {
+  let ingredientsList = '';
   for (let i = 0; i < recipe.ingredients.length; i++) {
-    test += `
+    ingredientsList += `
       <p class="li">
         ${recipe.ingredients[i].ingredient}
         ${recipe.ingredients[i].quantity !== undefined ? ':&nbsp' : ''}
@@ -30,14 +30,13 @@ const test = (recipe) => {
         ${recipe.ingredients[i].unit !== undefined ? recipe.ingredients[i].unit : ''} 
       </p>`;
   }
-  return test;
+  return ingredientsList;
 };
 
 const displayRecipes = (uiNodeToinject, recipesFound) => {
   uiNodeToinject.innerHTML = (
     recipesFound.map(recipe =>
       `  
-        <!-- = Block recette -->
         <article class="recipe">
           <div class="recipe__photo"></div>
           <div class="recipe__details">
@@ -47,13 +46,12 @@ const displayRecipes = (uiNodeToinject, recipesFound) => {
             </div>
             <div class="low-group-recipe">
               <div class="low-group-recipe__list">
-                ${test(recipe)}
+                ${displayIngredients(recipe)}
               </div>
               <p class="low-group-recipe__task">${recipe.description}</p>
             </div>
           </div>
         </article>
-        <!-- = Block recette-END -->
       `
     ).join('')
   );
@@ -73,15 +71,11 @@ export const searchByArrayMethod = () => {
     if (e.target.value.length >= 3) {
 
       const filterByName = (obj) => {
-        if (formatString(obj.name).indexOf(userSearch) !== -1) {
-          return true;
-        }
+        return formatString(obj.name).indexOf(userSearch) !== -1;
       };
 
       const filterByDescription = (obj) => {
-        if (formatString(obj.description).indexOf(userSearch) !== -1) {
-          return true;
-        }
+        return formatString(obj.description).indexOf(userSearch) !== -1;
       };
 
       const filterByIngredient = (obj) => {
@@ -92,22 +86,21 @@ export const searchByArrayMethod = () => {
         }
       };
 
-      recipes.filter(filterByName).forEach(e =>
-        recipesFound.push(e)
-      );
+      recipes.filter(filterByName).forEach(e => recipesFound.push(e));
 
-      recipes.filter(filterByDescription).forEach(e =>
-        recipesFound.push(e)
-      );
+      recipes.filter(filterByDescription).forEach(e => recipesFound.push(e));
 
-      recipes.filter(filterByIngredient).forEach(e =>
-        recipesFound.push(e)
-      );
+      recipes.filter(filterByIngredient).forEach(e => recipesFound.push(e));
 
       recipesFound = Array.from(new Set(recipesFound));
+
       recipesFound = recipesFound.sort(sortByName);
 
-      console.log(recipesFound);
+      recipesFound[0] === undefined ? uiNodeToinject.innerHTML = '<p>Aucune recette ne correspond à votre recherche</p>' : displayRecipes(uiNodeToinject, recipesFound);
+
+    } else {
+
+      recipesFound = [];
 
       displayRecipes(uiNodeToinject, recipesFound);
 

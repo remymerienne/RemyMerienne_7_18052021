@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const recipes = [
 
   {
@@ -222,8 +223,8 @@ const recipes = [
     'description': 'Commencez par mélanger les oeufs le sucre et le sucre vanillé dans un saladier, découper les pommes en tranches, ajouter la crème fraiche aux oeufs. Une fois que tout est pret, étalez la tarte dans le moule. N\'oubliez pas de piquer le fond avec une fourchette avant depositionner les pommes sur la tarte. Finallement verser la préparation à base d\'oeufs et de crême fraiche. Laisser cuire au four pendant 30 minutes',
     'appliance': 'Four',
     'ustensils': ['moule à tarte', 'saladier', 'fourchette']
-  }, 
-  
+  },
+
   {
     'id': 7,
     'name': 'Tartelettes au chocolat et aux fraises',
@@ -256,8 +257,8 @@ const recipes = [
     'description': 'Etaler la pate dans les moules à tartelette. Faire cuire la pate 30 minutes. Découper le chocolat en morceau et le faire chauffer, y ajouter la crême liquide, ajouter le beurre et remuer jusqu\'à avoir une pâte homogène. Verser la pate sur les tartelettes. Couper les fraises en 2 et les positionner sur ',
     'appliance': 'Four',
     'ustensils': ['moule à tartelettes (6)', 'casserolle']
-  }, 
-  
+  },
+
   {
     'id': 8,
     'name': 'Brownie',
@@ -364,8 +365,8 @@ const recipes = [
     'description': 'Commencer par cuire les pommes de terre dans l\'eau bouillante. Puis epluchez les et coupez les en rondelles. Emincer les oignons puis les faire dorer dans du beurre. Ajouter le jambon fumé coupé en en morceaux ainsi que les pommes de terres. Salez, poivrez à votre gout ( et celui de vos convives ) Laissez cuisiner durant environ 10 minutes puis ajouter le vin blanc. Après 5 minutes, mettre le tout dans un plat à gratin. Coupez le rebelochon, soit en tranches, soit le couper en 2 dans le sens de l\'épaisseur et recouvrir les pommes de terre. Cuire au four (environ 220°) durant 25 minutes. C\'est prêt !',
     'appliance': 'Four',
     'ustensils': ['plat à gratin', 'couteau', 'Économe']
-  }, 
-  
+  },
+
   {
     'id': 11,
     'name': 'Salade tomate, mozzarella et pommes',
@@ -403,8 +404,8 @@ const recipes = [
     'description': 'Commencer par couper les feuilles de salade, ajouter les tomates cerises et le fromage découpé en cubes ou en boules avec la cuillère à melon. Découper le jambon de parme en fines lamelles. Ajouter la pomme elle aussi découpée en petit morceaux. Assaisonnez à votre gout. ',
     'appliance': 'Saladier',
     'ustensils': ['couteau', 'cuillère à melon']
-  }, 
-  
+  },
+
   {
     'id': 12,
     'name': 'Compote pomme rhubarbe',
@@ -1741,46 +1742,12 @@ const formatString = (string) => {
   return string;
 };
 
-(() => {
-
-  const userSearch = formatString('fra');
-
-  let recipesFound = [];
-
-  const filterByName = (obj) => {
-    if (formatString(obj.name).indexOf(userSearch) !== -1) {
-      return true;
-    }
-  };
-
-  const filterByDescription = (obj) => {
-    if (formatString(obj.description).indexOf(userSearch) !== -1) {
-      return true;
-    }
-  };
-
-  const filterByIngredient = (obj) => {
-    for (let i in obj.ingredients) {
-      if (formatString(obj.ingredients[i].ingredient).indexOf(userSearch) !== -1) {
-        return true;
-      }
-    }
-  };
-
-  recipes.filter(filterByName).forEach(e => {
-    recipesFound.push(e.id);
-  });
-
-  recipes.filter(filterByDescription).forEach(e => {
-    recipesFound.push(e.id);
-  });
-
-  recipes.filter(filterByIngredient).forEach(e => {
-    recipesFound.push(e.id);
-  });
-
-  recipesFound = Array.from(new Set(recipesFound));
-
-  recipesFound.sort((a, b) => a - b);
-
-})();
+const sortByName = (a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+};

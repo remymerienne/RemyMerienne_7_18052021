@@ -861,7 +861,7 @@ export const recipes = [
       }
     ],
     'time': 40,
-    'description': 'Découper le concombre et les tomates en dés, les mettre dans un saladier avec le mais et les miettes de poisson, ajouter les pates. Ajouter la mayonnaise. Mélanger le tout et servir frais.',
+    'description': 'Découper le concombre et les tomates en dés, les mettre dans un saladier avec le maïs et les miettes de poisson, ajouter les pates. Ajouter la mayonnaise. Mélanger le tout et servir frais.',
     'appliance': 'Saladier',
     'ustensils': ['couteau', 'cuillère en bois']
   },
@@ -1229,7 +1229,7 @@ export const recipes = [
       }
     ],
     'time': 25,
-    'description': 'Éplucher les légumes, les couper en morceaux et les mettre à cuire dans une cocotte minute environ 15 minutes. Mixer en ajoutant le beurre, la crème. Ajouter le cumun et la noix de muscade.',
+    'description': 'Éplucher les légumes, les couper en morceaux et les mettre à cuire dans une cocotte minute environ 15 minutes. Mixer en ajoutant le beurre, la crème. Ajouter le cumin et la noix de muscade.',
     'appliance': 'Mixer',
     'ustensils': ['cocotte minute', 'couteau', 'cuillère en bois']
   },
@@ -1709,7 +1709,7 @@ export const recipes = [
         'quantity': 6
       },
       {
-        'ingredient': 'Poudre d\'amendes',
+        'ingredient': 'Poudre d\'amandes',
         'quantity': 500,
         'unit': 'grammes'
       },
