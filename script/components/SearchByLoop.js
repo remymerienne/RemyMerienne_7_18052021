@@ -1,4 +1,4 @@
-import { recipes } from '../../recipes';
+import { recipes } from '../recipes';
 
 const formatString = (string) => {
   string = string.toLowerCase();
@@ -7,6 +7,16 @@ const formatString = (string) => {
   string = string.replace(/[à]/g, 'a');
   string = string.replace(/[ç]/g, 'c');
   return string;
+};
+
+const sortByName = (a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
 };
 
 export const searchByLoop = () => {
@@ -49,7 +59,8 @@ export const searchByLoop = () => {
         // Test de correspondance générale
         if (testResultByName !== -1 || testResultByDescription !== -1 || testResultByIngredient !== -1) {
           // Tableau contenant les Id des recettes ayant correspondance avec la saisie utilisateur
-          recipesFound.push(recipeTested.id);
+          recipesFound.push(recipeTested);
+          recipesFound = recipesFound.sort(sortByName);
         }
 
       }
