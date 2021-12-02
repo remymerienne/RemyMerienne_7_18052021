@@ -3,6 +3,7 @@ Liens du projet :
 [Projet OC](https://openclassrooms.com/fr/paths/314/projects/814/assignment)
 [Maquette Figma](https://www.figma.com/file/xqeE1ZKlHUWi2Efo8r73NK/UI-Design-Les-Petits-Plats-FR)
 [Benchmark](https://jsben.ch/)
+[Draw.io](https://app.diagrams.net/)
 
 *******************************************************************************
 
@@ -26,6 +27,9 @@ To Do List :
 ------------
 - Prévoir responsive
 - Images pour recettes ???
+- MAJ de sr-only avec bootstrap
+- Texture pour <main> vide ???
+- Mise en page du message d'erreur
 
 *******************************************************************************
 
