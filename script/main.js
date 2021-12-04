@@ -1,3 +1,3 @@
-import { searchByArrayMethod } from './components/SearchByArrayMethod';
+import { selectAndDisplay } from './components/SearchAlgorithm';
 
-searchByArrayMethod();
+selectAndDisplay();
