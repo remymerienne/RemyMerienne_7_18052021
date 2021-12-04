@@ -1,3 +1,3 @@
-import { recipes } from './components/recipes';
+import { selectAndDisplay } from './components/SearchAlgorithm';
 
-console.log(recipes);
+selectAndDisplay();
