@@ -7,6 +7,9 @@ export const selectAndDisplay = () => {
   const uiNodeSearchBar = document.querySelector('.search-bar__input');
   const uiNodeToinject = document.querySelector('main.main');
   let recipesFound = [];
+  let ingredientList = [];
+  let applianceList = [];
+  let ustensilList = [];
 
   uiNodeSearchBar.addEventListener('keyup', e => {
 
@@ -39,6 +42,21 @@ export const selectAndDisplay = () => {
       } else {
         displayRecipes(uiNodeToinject, recipesFound);
       }
+
+      // Tri des ingrédients et stockage dans un tableau dédié
+      recipesFound.forEach(e => e.ingredients.forEach(el => ingredientList.push(el.ingredient)));
+      ingredientList = Array.from(new Set(ingredientList));
+      ingredientList = ingredientList.sort();
+
+      // Tri des appareils et stockage dans un tableau dédié
+      recipesFound.forEach(e => applianceList.push(e.appliance));
+      applianceList = Array.from(new Set(applianceList));
+      applianceList = applianceList.sort();
+
+      // Tri des ustensiles et stockage dans un tableau dédié
+      recipesFound.forEach(e => e.ustensils.forEach(el => ustensilList.push(el)));
+      ustensilList = Array.from(new Set(ustensilList));
+      ustensilList = ustensilList.sort();
 
       // En dessous de 3 caractères saisis, pas de recette affichée
     } else {
