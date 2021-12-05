@@ -123,17 +123,19 @@ td, th {
   display: flex;
   flex-wrap: wrap;
   column-gap: 2%;
+  margin-top: 65px;
 }
 
 .buttons-row__button {
+  position: absolute;
   width: 170px;
   height: 69px;
-  margin-right: 20px;
   padding: 20px;
   border-radius: 5px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .tags-row__tag {
@@ -187,7 +189,7 @@ td, th {
 
 .tags-row {
   display: flex;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .tags-row__tag--ingredient {
   background-color: #3282f7;
@@ -212,9 +214,11 @@ td, th {
 }
 .buttons-row__button--device {
   background-color: #68d9a4;
+  margin-left: 190px;
 }
 .buttons-row__button--utensil {
   background-color: #ed6454;
+  margin-left: 380px;
 }
 .buttons-row .fa-chevron-down {
   font-size: 16px;
@@ -277,6 +281,35 @@ td, th {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   overflow: hidden;
+}
+
+.list {
+  position: absolute;
+  display: none;
+  flex-flow: column wrap;
+  column-gap: 3%;
+  width: 670px;
+  padding: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.list .li {
+  margin-top: 10px;
+}
+
+.js-list-ingredient {
+  background-color: #3282f7;
+}
+
+.js-list-device {
+  background-color: #68d9a4;
+}
+
+.js-list-utensil {
+  background-color: #ed6454;
 }
 
 /*# sourceMappingURL=style.css.map */

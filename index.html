@@ -27,72 +27,44 @@
       </header>
       <!-- * Header-END -->
 
-      <!-- = Barre de recherche -->
+      <!-- * Barre de recherche -->
       <div class="search-bar">
         <label class="sr-only" for="name">Rechercher un ingrédient, appareil, ustensiles ou une recette</label>
         <input class="search-bar__input" type="text" id="name"
           placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
         <span class="fas fa-search search-bar__logo"></span>
       </div>
-      <!-- = Barre de recherche-END -->
+      <!-- * Barre de recherche-END -->
 
-      <!-- = Ligne de tags ingredient -->
-      <div class="tags-row">
-        <div class="tags-row__tag tags-row__tag--ingredient">
-          <p>Pomme</p>
-          <span class="far fa-times-circle"></span>
-        </div>
-        <div class="tags-row__tag tags-row__tag--ingredient">
-          <p>Crème fraiche</p>
-          <span class="far fa-times-circle"></span>
-        </div>
-      </div>
-      <!-- = Ligne de tags ingredient-END -->
-
-      <!-- = Ligne de tags device -->
-      <div class="tags-row">
-        <div class="tags-row__tag tags-row__tag--device">
-          <p>Mixeur</p>
-          <span class="far fa-times-circle"></span>
-        </div>
-        <div class="tags-row__tag tags-row__tag--device">
-          <p>Four</p>
-          <span class="far fa-times-circle"></span>
-        </div>
-      </div>
-      <!-- = Ligne de tags device-END -->
-
-      <!-- = Ligne de tags utensil -->
-      <div class="tags-row">
-        <div class="tags-row__tag tags-row__tag--utensil">
-          <p>Fouet</p>
-          <span class="far fa-times-circle"></span>
-        </div>
-      </div>
-      <!-- = Ligne de tags utensil-END -->
-
-      <!-- = Ligne de boutons -->
+      <!-- * Ligne de boutons -->
       <div class="buttons-row">
+
         <!-- - Bouton ingrédients -->
         <div class="buttons-row__button buttons-row__button--ingredient">
           <p>Ingrédients</p>
           <span class="fas fa-chevron-down"></span>
         </div>
+        <ul class="list js-list-ingredient"></ul>
         <!-- - Bouton ingrédients-END -->
+
         <!-- - Bouton appareil -->
         <div class="buttons-row__button buttons-row__button--device">
           <p>Appareil</p>
           <span class="fas fa-chevron-down"></span>
         </div>
+        <ul class="list js-list-device"></ul>
         <!-- - Bouton appareil-END -->
+
         <!-- - Bouton ustensiles -->
         <div class="buttons-row__button buttons-row__button--utensil">
           <p>Ustensiles</p>
           <span class="fas fa-chevron-down"></span>
         </div>
+        <ul class="list js-list-utensil"></ul>
         <!-- - Bouton ustensiles-END -->
+
       </div>
-      <!-- = Ligne de boutons-END -->
+      <!-- * Ligne de boutons-END -->
 
       <!-- * Contenu principal -->
       <main class="main">

@@ -11,6 +11,7 @@
 // =    a. Box layout
 // =    b. Title and time layout
 // =    c. Ingredients and tasks layout
+// - 6. Items list
 // ====================================
 
 // - 1. Header
@@ -68,7 +69,7 @@
 
 .tags-row {
   display: flex;
-  margin-top: 15px;
+  margin-top: 20px;
 
   &__tag--ingredient {
     background-color: $background-ingredient-color;
@@ -101,10 +102,12 @@
 
   &__button--device {
     background-color: $background-device-color;
+    margin-left: 190px;
   }
 
   &__button--utensil {
     background-color: $background-utensil-color;
+    margin-left: 380px;
   }
 
   .fa-chevron-down {
@@ -194,6 +197,39 @@
     font-size: 12px;
     overflow: hidden;
   }
+}
+
+// - 6. Items list
+// --------------------------
+
+.list{
+  position: absolute;
+  display: none;
+  flex-flow: column wrap;
+  column-gap: 3%;
+  width: 670px;
+  padding: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+
+  .li {
+    margin-top: 10px;
+  }
+}
+
+.js-list-ingredient {
+  background-color: $background-ingredient-color;
+}
+
+.js-list-device {
+  background-color: $background-device-color;
+}
+
+.js-list-utensil {
+  background-color: $background-utensil-color;
 }
 
 // * End
