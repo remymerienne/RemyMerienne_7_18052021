@@ -30,6 +30,8 @@ To Do List :
 - MAJ de sr-only avec bootstrap
 - Texture pour <main> vide ???
 - Mise en page du message d'erreur
+- Annimation pour placements de boutons ???
+- Hover pour les items de liste
 
 *******************************************************************************
 
