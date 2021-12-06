@@ -23,7 +23,7 @@ const displayList = (uiNodeToInject, array) => {
   );
 };
 
-export const setIngredientList = (array) => {
+export const displayIngredientsList = (array) => {
   uiNodeIngredientButton.addEventListener('click', () => {
     uiNodeIngredientButton.style.display = 'none';
     uiNodeIngredientList.style.display = 'flex';
@@ -42,7 +42,7 @@ export const setIngredientList = (array) => {
   });
 };
 
-export const setDeviceList = (array) => {
+export const displayDevicesList = (array) => {
   uiNodeDeviceButton.addEventListener('click', () => {
     uiNodeDeviceButton.style.display = 'none';
     uiNodeDeviceList.style.display = 'flex';
@@ -60,7 +60,7 @@ export const setDeviceList = (array) => {
   });
 };
 
-export const setUtensilList = (array) => {
+export const displayUtensilsList = (array) => {
   uiNodeUtensilButton.addEventListener('click', () => {
     uiNodeUtensilButton.style.display = 'none';
     uiNodeUtensilList.style.display = 'flex';
