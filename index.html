@@ -40,27 +40,48 @@
       <div class="buttons-row">
 
         <!-- - Bouton ingrédients -->
-        <div class="buttons-row__button buttons-row__button--ingredient">
+        <div class="buttons-row__button buttons-row__button--ingredient js-open">
           <p>Ingrédients</p>
           <span class="fas fa-chevron-down"></span>
         </div>
-        <ul class="list js-list-ingredient"></ul>
+        <div class="box box-ingredient">
+          <div class="box__search">
+            <label class="sr-only" for="ingredient">Rechercher un ingrédient</label>
+            <input type="text" id="ingredient" placeholder="Rechercher un ingrédient">
+            <span class="fas fa-chevron-up"></span>
+          </div>
+          <ul class="box__list box__list--ingredient"></ul>
+        </div>
         <!-- - Bouton ingrédients-END -->
 
         <!-- - Bouton appareil -->
-        <div class="buttons-row__button buttons-row__button--device">
+        <div class="buttons-row__button buttons-row__button--device js-open">
           <p>Appareil</p>
           <span class="fas fa-chevron-down"></span>
         </div>
-        <ul class="list js-list-device"></ul>
+        <div class="box box-device">
+          <div class="box__search">
+            <label class="sr-only" for="device">Rechercher un ingrédient</label>
+            <input type="text" id="device" placeholder="Rechercher un ingrédient">
+            <span class="fas fa-chevron-up"></span>
+          </div>
+          <ul class="box__list box__list--device"></ul>
+        </div>
         <!-- - Bouton appareil-END -->
 
         <!-- - Bouton ustensiles -->
-        <div class="buttons-row__button buttons-row__button--utensil">
+        <div class="buttons-row__button buttons-row__button--utensil js-open">
           <p>Ustensiles</p>
           <span class="fas fa-chevron-down"></span>
         </div>
-        <ul class="list js-list-utensil"></ul>
+        <div class="box box-utensil">
+          <div class="box__search">
+            <label class="sr-only" for="utensil">Rechercher un ingrédient</label>
+            <input type="text" id="utensil" placeholder="Rechercher un ingrédient">
+            <span class="fas fa-chevron-up"></span>
+          </div>
+          <ul class="box__list box__list--utensil"></ul>
+        </div>
         <!-- - Bouton ustensiles-END -->
 
       </div>

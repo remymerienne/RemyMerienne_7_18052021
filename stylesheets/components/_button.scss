@@ -4,7 +4,6 @@
 
 .buttons-row__button {
   @extend %flex-between;
-  position: absolute;
   width: 170px;
   height: 69px;
   padding: 20px;

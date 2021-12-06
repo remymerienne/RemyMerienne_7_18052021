@@ -11,7 +11,7 @@
 // =    a. Box layout
 // =    b. Title and time layout
 // =    c. Ingredients and tasks layout
-// - 6. Items list
+// - 6. Item Boxes
 // ====================================
 
 // - 1. Header
@@ -47,8 +47,8 @@
   border-radius: 5px;
 
   &__input {
-    width: 550px;
-    border: none;
+    width: 100%;
+    height: 50px;
     background-color: $background-light-color;
     color: #000000;
     font-size: 18px;
@@ -102,12 +102,12 @@
 
   &__button--device {
     background-color: $background-device-color;
-    margin-left: 190px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   &__button--utensil {
     background-color: $background-utensil-color;
-    margin-left: 380px;
   }
 
   .fa-chevron-down {
@@ -126,7 +126,6 @@
   flex-direction: column;
   width: 32%;
   height: 364px;
-  margin-top: 25px;
   border-radius: 5px;
   overflow: hidden;
 
@@ -199,37 +198,84 @@
   }
 }
 
-// - 6. Items list
+// - 6. Item boxes
 // --------------------------
 
-.list{
-  position: absolute;
+.box {
   display: none;
-  flex-flow: column wrap;
-  column-gap: 3%;
   width: 670px;
-  padding: 20px;
+  overflow: hidden;
   border-radius: 5px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 400;
-  cursor: pointer;
 
-  .li {
-    margin-top: 10px;
+  &-ingredient,
+  &-ingredient input {
+    background-color: $background-ingredient-color;
   }
-}
 
-.js-list-ingredient {
-  background-color: $background-ingredient-color;
-}
+  &-device,
+  &-device input {
+    background-color: $background-device-color;
+  }
 
-.js-list-device {
-  background-color: $background-device-color;
-}
+  &-device {
+    margin: 0 20px;
+  }
 
-.js-list-utensil {
-  background-color: $background-utensil-color;
+  &-utensil,
+  &-utensil input {
+    background-color: $background-utensil-color;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 69px;
+    padding: 0 20px;
+
+    input {
+      width: 80%;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+
+      &::placeholder {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        opacity: 0.5;
+      }
+    }
+
+    .fa-chevron-up {
+      margin-right: 10px;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.70;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    column-gap: 3%;
+    padding: 0 20px 20px 20px;
+    cursor: pointer;
+
+    .li {
+      margin-top: 10px;
+
+      &:hover {
+        opacity: 0.70;
+      }
+    }
+  }
 }
 
 // * End

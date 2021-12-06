@@ -1,5 +1,16 @@
 import { recipes } from '../recipes';
-import { displayIngredientsList, displayDevicesList, displayUtensilsList } from './DisplayListItems';
+import { displayItemBoxes } from './DisplayItemBoxes';
+import { displayRecipes } from './DisplayRecipes';
+
+const uiNodeIngredientButton = document.querySelector('div.buttons-row__button--ingredient');
+const uiNodeDeviceButton = document.querySelector('div.buttons-row__button--device');
+const uiNodeUtensilButton = document.querySelector('div.buttons-row__button--utensil');
+const uiNodeIngredientBox = document.querySelector('div.box-ingredient');
+const uiNodeDeviceBox = document.querySelector('div.box-device');
+const uiNodeUtensilBox = document.querySelector('div.box-utensil');
+const uiNodeIngredientList = document.querySelector('ul.box__list--ingredient');
+const uiNodeDeviceList = document.querySelector('ul.box__list--device');
+const uiNodeUtensilList = document.querySelector('ul.box__list--utensil');
 
 const formatString = (string) => {
   string = string.toLowerCase();
@@ -20,44 +31,6 @@ const sortByName = (a, b) => {
   return 0;
 };
 
-const displayIngredients = (recipe) => {
-  let ingredientsList = '';
-  for (let i = 0; i < recipe.ingredients.length; i++) {
-    ingredientsList += `
-      <p class="li">
-        ${recipe.ingredients[i].ingredient}
-        ${recipe.ingredients[i].quantity !== undefined ? ':&nbsp' : ''}
-        ${recipe.ingredients[i].quantity !== undefined ? recipe.ingredients[i].quantity : ''} 
-        ${recipe.ingredients[i].unit !== undefined ? recipe.ingredients[i].unit : ''} 
-      </p>`;
-  }
-  return ingredientsList;
-};
-
-const displayRecipes = (uiNodeToinject, recipesFound) => {
-  uiNodeToinject.innerHTML = (
-    recipesFound.map(recipe =>
-      `  
-        <article class="recipe">
-          <div class="recipe__photo"></div>
-          <div class="recipe__details">
-            <div class="high-group-recipe">
-              <h2 class="high-group-recipe__title">${recipe.name}</h2>
-              <p class="high-group-recipe__time">${recipe.time}</p>
-            </div>
-            <div class="low-group-recipe">
-              <div class="low-group-recipe__list">
-                ${displayIngredients(recipe)}
-              </div>
-              <p class="low-group-recipe__task">${recipe.description}</p>
-            </div>
-          </div>
-        </article>
-      `
-    ).join('')
-  );
-};
-
 export const selectAndDisplay = () => {
 
   const uiNodeSearchBar = document.querySelector('.search-bar__input');
@@ -69,7 +42,7 @@ export const selectAndDisplay = () => {
     let recipesFound = [];
     let ingredientList = [];
     let deviceList = [];
-    let ustensilList = [];
+    let utensilList = [];
 
     if (e.target.value.length >= 3) {
 
@@ -106,21 +79,21 @@ export const selectAndDisplay = () => {
       ingredientList = Array.from(new Set(ingredientList));
       ingredientList = ingredientList.sort();
       console.log(ingredientList);
-      displayIngredientsList(ingredientList);
+      displayItemBoxes(uiNodeIngredientButton, uiNodeIngredientBox, uiNodeIngredientList ,ingredientList);
 
       // Tri des appareils et stockage dans un tableau dédié
       recipesFound.forEach(e => deviceList.push(e.appliance));
       deviceList = Array.from(new Set(deviceList));
       deviceList = deviceList.sort();
       console.log(deviceList);
-      displayDevicesList(deviceList);
+      displayItemBoxes(uiNodeDeviceButton, uiNodeDeviceBox, uiNodeDeviceList ,deviceList);
 
       // Tri des ustensiles et stockage dans un tableau dédié
-      recipesFound.forEach(e => e.ustensils.forEach(el => ustensilList.push(el)));
-      ustensilList = Array.from(new Set(ustensilList));
-      ustensilList = ustensilList.sort();
-      console.log(ustensilList);
-      displayUtensilsList(ustensilList);
+      recipesFound.forEach(e => e.ustensils.forEach(el => utensilList.push(el)));
+      utensilList = Array.from(new Set(utensilList));
+      utensilList = utensilList.sort();
+      console.log(utensilList);
+      displayItemBoxes(uiNodeUtensilButton, uiNodeUtensilBox, uiNodeUtensilList , utensilList);
 
       // En dessous de 3 caractères saisis, pas de recette affichée
     } else {
