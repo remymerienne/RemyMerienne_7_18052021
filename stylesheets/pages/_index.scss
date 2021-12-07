@@ -230,9 +230,7 @@
   }
 
   &__search {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %flex-between;
     height: 69px;
     padding: 0 20px;
 
@@ -273,6 +271,20 @@
 
       &:hover {
         opacity: 0.70;
+      }
+    }
+
+    .error {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 20px;
+
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f119";
+        font-size: 30px;
       }
     }
   }

@@ -14,15 +14,15 @@
 }
 
 .main {
-  position: absolute;
-  z-index: -1;
-  max-width: 1240px;
-  top: 340px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 2%;
   row-gap: 25px;
+  top: 340px;
+  max-width: 1240px;
   margin: 0 100px 0 auto;
+  position: absolute;
+  z-index: -1;
 }
 
 // * End

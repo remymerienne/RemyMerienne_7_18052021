@@ -19,15 +19,15 @@ const displayList = (uiNodeToInject, array) => {
 export const displayItemBoxes = (button, box, list, array) => {
 
   button.addEventListener('click', () => {
-
+    
     button.style.display = 'none';
     box.style.display = 'initial';
     button.classList.remove('js-open');
-
-    const page = document.querySelector('.page');
-    const selectForClose = '.main, .js-open, .fa-chevron-up';
-    const NodesForClose = Array.from(page.querySelectorAll(selectForClose));
     
+    const page = document.querySelector('.page');
+    const selectForClose = '.main, .js-open, .fa-chevron-up, .search-bar__input';
+    const NodesForClose = Array.from(page.querySelectorAll(selectForClose));
+
     NodesForClose.forEach(e => {
       e.addEventListener('click', () => {
         button.style.display = 'flex';

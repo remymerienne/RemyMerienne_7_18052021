@@ -43,7 +43,7 @@ td, th {
   padding: 0;
 }
 
-.high-group-recipe, .search-bar, .tags-row__tag, .buttons-row__button {
+.box__search, .high-group-recipe, .search-bar, .tags-row__tag, .buttons-row__button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -125,15 +125,15 @@ input {
 }
 
 .main {
-  position: absolute;
-  z-index: -1;
-  max-width: 1240px;
-  top: 340px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 2%;
   row-gap: 25px;
+  top: 340px;
+  max-width: 1240px;
   margin: 0 100px 0 auto;
+  position: absolute;
+  z-index: -1;
 }
 
 .buttons-row__button {
@@ -313,9 +313,6 @@ input {
   background-color: #ed6454;
 }
 .box__search {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 69px;
   padding: 0 20px;
 }
@@ -351,6 +348,18 @@ input {
 }
 .box__list .li:hover {
   opacity: 0.7;
+}
+.box__list .error {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.box__list .error::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f119";
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

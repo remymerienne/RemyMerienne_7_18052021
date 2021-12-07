@@ -11,6 +11,20 @@ const uiNodeUtensilBox = document.querySelector('div.box-utensil');
 const uiNodeIngredientList = document.querySelector('ul.box__list--ingredient');
 const uiNodeDeviceList = document.querySelector('ul.box__list--device');
 const uiNodeUtensilList = document.querySelector('ul.box__list--utensil');
+const uiNodeSearchBar = document.querySelector('.search-bar__input');
+const uiNodeToinject = document.querySelector('main.main');
+
+let recipesFound = [];
+let ingredientList = [];
+let deviceList = [];
+let utensilList = [];
+
+const globalDisplay = (recipesFound, ingredientList, deviceList, utensilList) => {
+  displayRecipes(uiNodeToinject, recipesFound);
+  displayItemBoxes(uiNodeIngredientButton, uiNodeIngredientBox, uiNodeIngredientList, ingredientList);
+  displayItemBoxes(uiNodeDeviceButton, uiNodeDeviceBox, uiNodeDeviceList, deviceList);
+  displayItemBoxes(uiNodeUtensilButton, uiNodeUtensilBox, uiNodeUtensilList, utensilList);
+};
 
 const formatString = (string) => {
   string = string.toLowerCase();
@@ -33,16 +47,13 @@ const sortByName = (a, b) => {
 
 export const selectAndDisplay = () => {
 
-  const uiNodeSearchBar = document.querySelector('.search-bar__input');
-  const uiNodeToinject = document.querySelector('main.main');
-  
   uiNodeSearchBar.addEventListener('keyup', e => {
-    
+
     const userSearch = formatString(e.target.value);
-    let recipesFound = [];
-    let ingredientList = [];
-    let deviceList = [];
-    let utensilList = [];
+    recipesFound = [];
+    ingredientList = [];
+    deviceList = [];
+    utensilList = [];
 
     if (e.target.value.length >= 3) {
 
@@ -65,43 +76,62 @@ export const selectAndDisplay = () => {
       recipesFound = recipes.filter(filterRecipes);
       recipesFound = recipesFound.sort(sortByName);
 
-      // Affichage des recettes trouvées si résultat trouvé sinon message d'erreur
-      if (recipesFound[0] === undefined) {
-        uiNodeToinject.innerHTML = '<p>Aucune recette ne correspond à votre recherche</p>';
-      } else {
-        displayRecipes(uiNodeToinject, recipesFound);
-      }
-
-      console.log(recipesFound);
-
       // Tri des ingrédients et stockage dans un tableau dédié
       recipesFound.forEach(e => e.ingredients.forEach(el => ingredientList.push(el.ingredient)));
       ingredientList = Array.from(new Set(ingredientList));
       ingredientList = ingredientList.sort();
-      console.log(ingredientList);
-      displayItemBoxes(uiNodeIngredientButton, uiNodeIngredientBox, uiNodeIngredientList ,ingredientList);
 
       // Tri des appareils et stockage dans un tableau dédié
       recipesFound.forEach(e => deviceList.push(e.appliance));
       deviceList = Array.from(new Set(deviceList));
       deviceList = deviceList.sort();
-      console.log(deviceList);
-      displayItemBoxes(uiNodeDeviceButton, uiNodeDeviceBox, uiNodeDeviceList ,deviceList);
 
       // Tri des ustensiles et stockage dans un tableau dédié
       recipesFound.forEach(e => e.ustensils.forEach(el => utensilList.push(el)));
       utensilList = Array.from(new Set(utensilList));
       utensilList = utensilList.sort();
+
+      // Affichage des recettes trouvées si résultat trouvé sinon message d'erreur
+      if (recipesFound[0] === undefined) {
+        uiNodeToinject.innerHTML = '<p>Aucune recette ne correspond à votre recherche</p>';
+        document.querySelectorAll('.box__search').forEach(e => e.style.display = 'none');
+        document.querySelectorAll('.box__list').forEach(e => e.innerHTML = '<p class="error">Aucun résultat</p>');
+        document.querySelectorAll('.box').forEach(e => e.style.width = '300px');
+        document.querySelectorAll('.box').forEach(e => e.style.height = '69px');
+      } else {
+        document.querySelectorAll('.box').forEach(e => e.style.width = '670px');
+        document.querySelectorAll('.box').forEach(e => e.style.height = 'initial');
+        globalDisplay(recipesFound, ingredientList, deviceList, utensilList);
+      }
+
+      console.log(recipesFound);
+      console.log(ingredientList);
+      console.log(deviceList);
       console.log(utensilList);
-      displayItemBoxes(uiNodeUtensilButton, uiNodeUtensilBox, uiNodeUtensilList , utensilList);
 
       // En dessous de 3 caractères saisis, pas de recette affichée
     } else {
       console.clear();
+      document.querySelectorAll('.box__search').forEach(e => e.style.display = 'flex');
+      document.querySelectorAll('.box').forEach(e => e.style.width = '300px');
+      document.querySelectorAll('.box').forEach(e => e.style.height = '69px');
+
       recipesFound = [];
-      displayRecipes(uiNodeToinject, recipesFound);
+      ingredientList = [];
+      deviceList = [];
+      utensilList = [];
+      globalDisplay(recipesFound, ingredientList, deviceList, utensilList);
     }
 
   });
 
+  document.querySelectorAll('.box__search').forEach(e => e.style.display = 'flex');
+  document.querySelectorAll('.box').forEach(e => e.style.width = '300px');
+  document.querySelectorAll('.box').forEach(e => e.style.height = '69px');
+
+  recipesFound = [];
+  ingredientList = [];
+  deviceList = [];
+  utensilList = [];
+  globalDisplay(recipesFound, ingredientList, deviceList, utensilList);
 };
