@@ -293,7 +293,6 @@ input {
 
 .box {
   display: none;
-  width: 670px;
   overflow: hidden;
   border-radius: 5px;
   color: #ffffff;
@@ -354,12 +353,6 @@ input {
   align-items: center;
   justify-content: space-around;
   margin-top: 20px;
-}
-.box__list .error::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f119";
-  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
