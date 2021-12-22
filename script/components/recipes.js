@@ -1,4 +1,5 @@
-export const recipes = [
+export const recipes = 
+[
   {
     'id': 1,
     'name': 'Limonade de coco',
@@ -855,7 +856,7 @@ export const recipes = [
         'unit': 'grammes'
       },
       {
-        'ingredient': 'Chocolat noir (pépites',
+        'ingredient': 'Chocolat noir (pépites)',
         'quantity': 100,
         'unit': 'grammes'
       },

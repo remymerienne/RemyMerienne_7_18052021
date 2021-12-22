@@ -132,6 +132,7 @@ input {
   top: 340px;
   max-width: 1240px;
   margin: 0 100px 0 auto;
+  padding-bottom: 20px;
   position: absolute;
   z-index: -1;
 }
@@ -140,6 +141,7 @@ input {
   width: 170px;
   height: 69px;
   padding: 20px;
+  border: none;
   border-radius: 5px;
   color: #ffffff;
   font-size: 18px;
@@ -150,12 +152,18 @@ input {
 .tags-row__tag {
   height: 37px;
   margin-right: 15px;
+  margin-bottom: 5px;
+  margin-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 5px;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
+}
+
+.fa-times-circle {
+  cursor: pointer;
 }
 
 .header {
@@ -176,13 +184,14 @@ input {
 
 .search-bar {
   height: 69px;
+  margin-bottom: 5px;
   margin-top: 17px;
   padding: 20px;
   background-color: #e7e7e7;
   border-radius: 5px;
 }
 .search-bar__input {
-  width: 100%;
+  width: 95%;
   height: 50px;
   background-color: #e7e7e7;
   color: #000000;
@@ -198,7 +207,6 @@ input {
 
 .tags-row {
   display: flex;
-  margin-top: 20px;
 }
 .tags-row__tag--ingredient {
   background-color: #3282f7;
@@ -216,7 +224,7 @@ input {
 
 .buttons-row {
   display: flex;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .buttons-row__button--ingredient {
   background-color: #3282f7;
@@ -316,7 +324,8 @@ input {
   padding: 0 20px;
 }
 .box__search input {
-  width: 80%;
+  width: 85%;
+  height: 50px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
@@ -347,12 +356,6 @@ input {
 }
 .box__list .li:hover {
   opacity: 0.7;
-}
-.box__list .error {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
