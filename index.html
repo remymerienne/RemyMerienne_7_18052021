@@ -27,78 +27,86 @@
       </header>
       <!-- * Header-END -->
 
-      <!-- = Barre de recherche -->
+      <!-- * Barre de recherche -->
       <div class="search-bar">
         <label class="sr-only" for="name">Rechercher un ingrédient, appareil, ustensiles ou une recette</label>
-        <input class="search-bar__input" type="text" id="name"
+        <input class="search-bar__input" id="name"
           placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
         <span class="fas fa-search search-bar__logo"></span>
       </div>
-      <!-- = Barre de recherche-END -->
+      <!-- * Barre de recherche-END -->
 
-      <!-- = Ligne de tags ingredient -->
-      <div class="tags-row">
-        <div class="tags-row__tag tags-row__tag--ingredient">
-          <p>Pomme</p>
-          <span class="far fa-times-circle"></span>
-        </div>
-        <div class="tags-row__tag tags-row__tag--ingredient">
-          <p>Crème fraiche</p>
-          <span class="far fa-times-circle"></span>
-        </div>
+      <!-- * Ligne de tags ingredient -->
+      <div class="tags-row ingredient-row">
       </div>
-      <!-- = Ligne de tags ingredient-END -->
+      <!-- * Ligne de tags ingredient-END -->
 
-      <!-- = Ligne de tags device -->
-      <div class="tags-row">
-        <div class="tags-row__tag tags-row__tag--device">
-          <p>Mixeur</p>
-          <span class="far fa-times-circle"></span>
-        </div>
-        <div class="tags-row__tag tags-row__tag--device">
-          <p>Four</p>
-          <span class="far fa-times-circle"></span>
-        </div>
+      <!-- * Ligne de tags device -->
+      <div class="tags-row device-row">
       </div>
-      <!-- = Ligne de tags device-END -->
-
-      <!-- = Ligne de tags utensil -->
-      <div class="tags-row">
-        <div class="tags-row__tag tags-row__tag--utensil">
-          <p>Fouet</p>
-          <span class="far fa-times-circle"></span>
-        </div>
+      <!-- * Ligne de tags device-END -->
+      
+      <!-- * Ligne de tags utensil -->
+      <div class="tags-row utensil-row">
       </div>
-      <!-- = Ligne de tags utensil-END -->
+      <!-- * Ligne de tags utensil-END -->
 
-      <!-- = Ligne de boutons -->
+      <!-- * Ligne de boutons -->
       <div class="buttons-row">
+
         <!-- - Bouton ingrédients -->
-        <div class="buttons-row__button buttons-row__button--ingredient">
-          <p>Ingrédients</p>
+        <button class="buttons-row__button buttons-row__button--ingredient" type="button">
+          Ingrédients
           <span class="fas fa-chevron-down"></span>
+        </button>
+        <div class="box box-ingredient">
+          <form class="box__search box__search-ingredient" novalidate>
+            <label class="sr-only" for="ingredient">Rechercher un ingrédient</label>
+            <input id="ingredient" placeholder="Rechercher un ingrédient">
+            <span class="fas fa-chevron-up"></span>
+          </form>
+          <ul class="box__list box__list--ingredient"></ul>
         </div>
         <!-- - Bouton ingrédients-END -->
+
         <!-- - Bouton appareil -->
-        <div class="buttons-row__button buttons-row__button--device">
-          <p>Appareil</p>
+        <button class="buttons-row__button buttons-row__button--device" type="button">
+          Appareil
           <span class="fas fa-chevron-down"></span>
+        </button>
+        <div class="box box-device">
+          <form class="box__search box__search-device">
+            <label class="sr-only" for="device">Rechercher un appareil</label>
+            <input id="device" placeholder="Rechercher un appareil">
+            <span class="fas fa-chevron-up"></span>
+          </form>
+          <ul class="box__list box__list--device"></ul>
         </div>
         <!-- - Bouton appareil-END -->
+
         <!-- - Bouton ustensiles -->
-        <div class="buttons-row__button buttons-row__button--utensil">
-          <p>Ustensiles</p>
+        <button class="buttons-row__button buttons-row__button--utensil" type="button">
+          Ustensiles
           <span class="fas fa-chevron-down"></span>
+        </button>
+        <div class="box box-utensil">
+          <form class="box__search box__search-utensil">
+            <label class="sr-only" for="utensil">Rechercher un ustensile</label>
+            <input id="utensil" placeholder="Rechercher un ustensile">
+            <span class="fas fa-chevron-up"></span>
+          </form>
+          <ul class="box__list box__list--utensil"></ul>
         </div>
         <!-- - Bouton ustensiles-END -->
-      </div>
-      <!-- = Ligne de boutons-END -->
 
+      </div>
+      <!-- * Ligne de boutons-END -->
+      
       <!-- * Contenu principal -->
       <main class="main">
       </main>
       <!-- * Contenu principal-END -->
-
+      
     </div>
   </div>
 

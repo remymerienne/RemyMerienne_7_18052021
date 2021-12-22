@@ -1,4 +1,5 @@
-export const recipes = [
+export const recipes = 
+[
   {
     'id': 1,
     'name': 'Limonade de coco',
@@ -456,7 +457,7 @@ export const recipes = [
     'name': 'Galette Bretonne Saucisse et Fromage à raclette',
     'servings': 2,
     'ingredients': [{
-        'ingredient': 'Saucisse bretonne ou de Toulouse',
+        'ingredient': 'Saucisse bretonne',
         'quantity': 2
       },
       {
@@ -704,7 +705,7 @@ export const recipes = [
         'unit': 'grammes'
       },
       {
-        'ingredient': 'Viande hachée 1% de matière grasse',
+        'ingredient': 'Viande hachée 1% m/g',
         'quantity': 400,
         'unit': 'grammes'
       },
@@ -855,7 +856,7 @@ export const recipes = [
         'unit': 'grammes'
       },
       {
-        'ingredient': 'Pépite de chocolat noir',
+        'ingredient': 'Chocolat noir (pépites)',
         'quantity': 100,
         'unit': 'grammes'
       },

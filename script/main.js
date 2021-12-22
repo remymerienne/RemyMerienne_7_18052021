@@ -1,3 +1,3 @@
-import { selectAndDisplay } from './components/SearchAlgorithm';
+import {mainAlgorithm} from './components/mainAlgorithm';
 
-selectAndDisplay();
+mainAlgorithm();
