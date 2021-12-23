@@ -16,7 +16,14 @@
 .main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  column-gap: 2%;
+  row-gap: 25px;
+  top: 340px;
+  max-width: 1240px;
+  margin: 0 100px 0 auto;
+  padding-bottom: 20px;
+  position: absolute;
+  z-index: -1;
 }
 
 // * End
