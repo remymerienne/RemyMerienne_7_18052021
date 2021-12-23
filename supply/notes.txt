@@ -24,7 +24,5 @@ Etapes du projet :
 
 To Do List :
 ------------
-- Prévoir responsive
-- Images pour recettes ???
 
 *******************************************************************************

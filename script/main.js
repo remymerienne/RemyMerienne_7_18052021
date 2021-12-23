@@ -1,3 +1,3 @@
-import { searchByLoop } from './components/SearchByLoop';
+import { mainAlgorithm } from './components/mainAlgorithm';
 
-searchByLoop();
+mainAlgorithm();

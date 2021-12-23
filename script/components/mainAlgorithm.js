@@ -1,4 +1,6 @@
-import { recipes } from '../recipes';
+import {
+  recipes
+} from '../recipes';
 
 const formatString = (string) => {
   string = string.toLowerCase();
@@ -19,7 +21,7 @@ const sortByName = (a, b) => {
   return 0;
 };
 
-export const searchByLoop = () => {
+export const mainAlgorithm = () => {
 
   const uiNodeSearchBar = document.querySelector('.search-bar__input');
 
@@ -29,6 +31,9 @@ export const searchByLoop = () => {
     if (e.target.value.length >= 3) {
 
       let recipesFound = [];
+      let ingredientFound = [];
+      let deviceFound = [];
+      let utensilFound = [];
 
       // Boucle principale inspectant toutes les recettes
       for (let i = 0; i < recipes.length; i++) {
@@ -58,14 +63,42 @@ export const searchByLoop = () => {
 
         // Test de correspondance générale
         if (testResultByName !== -1 || testResultByDescription !== -1 || testResultByIngredient !== -1) {
-          // Tableau contenant les Id des recettes ayant correspondance avec la saisie utilisateur
+          // Stockage des recettes ayant correspondance avec la saisie utilisateur
           recipesFound.push(recipeTested);
-          recipesFound = recipesFound.sort(sortByName);
         }
 
       }
 
+      // Parcours et stockage des ingrédient trouvés parmi les recettes retenues
+      for (let i in recipesFound) {
+        for (let j in recipesFound[i].ingredients) {
+          ingredientFound.push(recipesFound[i].ingredients[j].ingredient);
+        }
+      }
+
+      // Parcours et stockage des appareils trouvés parmi les recettes retenues
+      for (let i in recipesFound) {
+        deviceFound.push(recipesFound[i].appliance);
+      }
+
+      // Parcours et stockage des ustensiles trouvés parmi les recettes retenues
+      for (let i in recipesFound) {
+        for (let j in recipesFound[i].ustensils) {
+          utensilFound.push(recipesFound[i].ustensils[j]);
+        }
+      }
+
+      // Classement et suppression des doublons des données mises à jour
+      recipesFound = recipesFound.sort(sortByName);
+      ingredientFound = Array.from(new Set(ingredientFound)).sort();
+      deviceFound = Array.from(new Set(deviceFound)).sort();
+      utensilFound = Array.from(new Set(utensilFound)).sort();
+
+      // Vérification dans la console
       console.log(recipesFound);
+      console.log(ingredientFound);
+      console.log(deviceFound);
+      console.log(utensilFound);
 
     }
 
