@@ -35,6 +35,8 @@ To Do List :
 - Full favicon
 - font-display: swap;
 - Semantic markup
+- Test w3c !
+- Largeur recipes css !
 
 *******************************************************************************
 

@@ -1,0 +1,278 @@
+<mxfile host="65bd71144e">
+    <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+        <mxGraphModel dx="1021" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="15" value="Saisie utilisateur" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="59" y="30" width="149" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Formatage du texte (minuscule, sans accent)" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="73.5" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Noms des recettes" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="349" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Descriptions" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="499" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Ingrédients" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="649" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Formatage du texte (minuscule, sans accent)" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="499" y="270" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Comparaison entre la saisie et les noms de recette" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="349" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Comparaison entre la saisie et les descriptions" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="499" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Comparaison entre la saisie et les ingrédients" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="649" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#60a917;strokeColor=#2D7600;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="20" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="384" y="305" as="sourcePoint"/>
+                        <mxPoint x="499" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="409" y="280"/>
+                            <mxPoint x="459" y="280"/>
+                            <mxPoint x="499" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#e3c800;strokeColor=#B09500;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="21" target="25" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="649" y="300" as="sourcePoint"/>
+                        <mxPoint x="699" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#e51400;strokeColor=#B20000;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="23" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="749" y="280" as="sourcePoint"/>
+                        <mxPoint x="619" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="709" y="280"/>
+                            <mxPoint x="619" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="Recettes" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="484.5" y="30" width="149" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="17" target="28" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="359" y="370" as="sourcePoint"/>
+                        <mxPoint x="409" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="28" target="29" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="329" y="370" as="sourcePoint"/>
+                        <mxPoint x="379" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="29" target="30" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="329" y="370" as="sourcePoint"/>
+                        <mxPoint x="379" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="40" target="20" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="360" y="220" as="sourcePoint"/>
+                        <mxPoint x="410" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#e3c800;strokeColor=#B09500;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="40" target="21" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="516.4982143025763" y="108.37934362022895" as="sourcePoint"/>
+                        <mxPoint x="419" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#e51400;strokeColor=#B20000;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="40" target="23" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="360" y="220" as="sourcePoint"/>
+                        <mxPoint x="410" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="Stockage des recettes" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="519" y="640" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Sélection de chaque recette ayant une correspondance trouvée" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="349" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="28" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="330" y="610" as="sourcePoint"/>
+                        <mxPoint x="430" y="610" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="51" value="ForEach" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="50" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#e3c800;strokeColor=#B09500;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="558.5" y="440" as="sourcePoint"/>
+                        <mxPoint x="558.5" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" value="ForEach" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="53" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#e51400;strokeColor=#B20000;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="708.5" y="440" as="sourcePoint"/>
+                        <mxPoint x="708.5" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="ForEach" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="55" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="Sélection de chaque recette ayant une correspondance trouvée" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="499" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Sélection de chaque recette ayant une correspondance trouvée" style="whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="649" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="408.5" y="570" as="sourcePoint"/>
+                        <mxPoint x="408.5" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" value="Push" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="59" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#e3c800;strokeColor=#B09500;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="570" as="sourcePoint"/>
+                        <mxPoint x="682.2157287525379" y="651.7157287525379" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62" value="Push" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="61" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="63" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;fillColor=#e51400;strokeColor=#B20000;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="709.5" y="570" as="sourcePoint"/>
+                        <mxPoint x="708.5" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="64" value="Push" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="63" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="65" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="15" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="134" y="120" as="sourcePoint"/>
+                        <mxPoint x="252.21572875253787" y="191.71572875253787" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" value="Input" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="65" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="69" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="720" as="sourcePoint"/>
+                        <mxPoint x="560" y="790" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="70" value="new Set" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="69" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="73" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#f0f0f0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="25" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="340" y="530" as="sourcePoint"/>
+                        <mxPoint x="430" y="380" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="409" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="Filter" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="73" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="60" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#e3c800;strokeColor=#B09500;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="558.5" y="330" as="sourcePoint"/>
+                        <mxPoint x="559" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="77" value="Filter" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="76" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="78" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#f0f0f0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#e51400;strokeColor=#B20000;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="619" y="300" as="sourcePoint"/>
+                        <mxPoint x="719" y="299.5" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="709" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="79" value="Filter" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="78" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="60" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="81" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#3333FF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="559.5" y="850" as="sourcePoint"/>
+                        <mxPoint x="558.5" y="920" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="82" value="sort" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="81" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="83" value="Suppression des doublons" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#f0f0f0;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="499" y="790" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="Tri par ordre alphabétique" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#f0f0f0;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="499" y="920" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="Affichage des recettes dans l'application" style="shape=ext;double=1;whiteSpace=wrap;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#f0f0f0;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="499" y="1050" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="" style="endArrow=classic;html=1;fontFamily=Andika;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAndika;fontSize=12;fontColor=#f0f0f0;gradientColor=#ea6b66;fillColor=#f8cecc;strokeColor=#b85450;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="84" target="85" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="340" y="760" as="sourcePoint"/>
+                        <mxPoint x="440" y="760" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="108" value="innerHTML" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="107" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1" y="-15" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="109" value="map" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rounded=1;" parent="107" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1" y="5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
