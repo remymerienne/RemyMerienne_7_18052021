@@ -1,11 +1,6 @@
 /* eslint-disable no-undef */
 (() => {
 
-  let recipesFound = [];
-
-  let userSearch = formatString('Crème');
-  userSearch = new RegExp('\\b' + userSearch, 'gi');
-
   for (let i in recipes) {
 
     const recipeTested = recipes[i];
@@ -33,7 +28,5 @@
   }
 
   recipesFound = recipesFound.sort(byName);
-
-  // console.log(recipesFound);
 
 })();

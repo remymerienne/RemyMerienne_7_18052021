@@ -1693,3 +1693,7 @@ const byName = (a, b) => {
   }
   return 0;
 };
+
+let recipesFound = [];
+let userSearch = formatString('Crème');
+userSearch = new RegExp('\\b' + userSearch, 'gi');

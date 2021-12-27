@@ -2,11 +2,6 @@
 /* eslint-disable no-undef */
 (() => {
 
-  let recipesFound = [];
-
-  let userSearch = formatString('Crème');
-  userSearch = new RegExp('\\b' + userSearch, 'gi');
-
   const filterRecipes = (recipe) => {
     if (formatString(recipe.name).match(userSearch) !== null) {
       return true;
@@ -23,7 +18,5 @@
   };
 
   recipesFound = recipes.filter(filterRecipes).sort(byName);
-
-  // console.log(recipesFound);
 
 })();
