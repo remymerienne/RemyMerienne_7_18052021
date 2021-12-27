@@ -94,6 +94,7 @@ export const mainAlgorithm = () => {
   // - Affichage par défaut --- END
 
   // ******************************************************
+  // * # 1 Blocs de recherche principale
 
   // - # 1 Recherche principale --- START
   inputSearchBar.addEventListener('keyup', e => {
@@ -117,8 +118,10 @@ export const mainAlgorithm = () => {
     resetAllList();
     displayRecipes(mainContentBlock, recipesFound);
     displayAllItemBoxes(ingredientList, deviceList, utensilList);
+    
     const userSearch = new RegExp('\\b' + formatString(e.target.value), 'gi');
 
+    // Déclenchement de la recherche au troisième caractère saisi
     if (e.target.value.length >= 3) {
 
       const filterRecipes = (recipe) => {
@@ -177,6 +180,7 @@ export const mainAlgorithm = () => {
 
       // En dessous de 3 caractères saisis
     } else {
+
       // - Affichage par défaut --- START
       recipesFound = recipes;
       recipesFound = recipesFound.sort(byName);
@@ -192,6 +196,7 @@ export const mainAlgorithm = () => {
       // = Display console
       logAfterMainSearch(recipesFound, ingredientList, deviceList, utensilList);
       // - Affichage par défaut --- END
+      
     }
 
   });
