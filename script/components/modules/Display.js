@@ -62,14 +62,14 @@ export const displayItemBoxes = (button, box, list, array) => {
     // Ouverture des listes au click sur bouton
     button.style.display = 'none';
     box.style.display = 'initial';
-    // box.reset();
     button.classList.remove('js-open');
 
-    // Définition des zones de click et fermeture des listes 
+    // Définition des zones de click pour fermeture des listes 
     const page = document.querySelector('.page');
-    const selectForClose = '.main, .js-open, .fa-chevron-up, .search-bar__input';
+    const selectForClose = '.main, .page, .js-open, .fa-chevron-up, .search-bar, .header, .tags-row, .li';
     const NodesForClose = Array.from(page.querySelectorAll(selectForClose));
 
+    // Fermeture des listes ...
     NodesForClose.forEach(e => {
       e.addEventListener('click', () => {
         button.style.display = 'flex';

@@ -286,11 +286,9 @@ export const mainAlgorithm = () => {
         crossesForCloseTag.forEach(e => {
           e.addEventListener('click', el => {
 
-            // Fermeture et reset de la box à la suppression d'un tag
+            // Reset de la box au choix d'un item
             document.querySelectorAll('form.box__search').forEach(e => e.reset());
-            ingredientButton.style.display = 'flex';
-            ingredientBox.style.display = 'none';
-
+            
             // Récupération à chaque suppression de tag, des recettes trouvées avec la recherche principale
             recipesAfterCloseTag = firstRecipesFound;
 
@@ -407,7 +405,7 @@ export const mainAlgorithm = () => {
         displayRecipes(mainContentBlock, refineRecipesFound);
         displayAllItemBoxes(refineIngredientList, refineDeviceList, refineUtensilList);
 
-        // Fermeture et reset de la box au choix d'un item
+        // Reset de la box au choix d'un item
         document.querySelectorAll('form.box__search').forEach(e => e.reset());
         deviceButton.style.display = 'flex';
         deviceBox.style.display = 'none';
@@ -426,10 +424,8 @@ export const mainAlgorithm = () => {
         crossesForCloseTag.forEach(e => {
           e.addEventListener('click', el => {
 
-            // Fermeture et reset de la box à la suppression d'un tag
+            // Reset de la box au choix d'un item
             document.querySelectorAll('form.box__search').forEach(e => e.reset());
-            deviceButton.style.display = 'flex';
-            deviceBox.style.display = 'none';
 
             // Récupération à chaque suppression de tag, des recettes trouvées avec la recherche principale
             recipesAfterCloseTag = firstRecipesFound;
@@ -549,7 +545,7 @@ export const mainAlgorithm = () => {
         displayRecipes(mainContentBlock, refineRecipesFound);
         displayAllItemBoxes(refineIngredientList, refineDeviceList, refineUtensilList);
 
-        // Fermeture et reset de la box au choix d'un item
+        // Reset de la box au choix d'un item
         document.querySelectorAll('form.box__search').forEach(e => e.reset());
         utensilButton.style.display = 'flex';
         utensilBox.style.display = 'none';
@@ -568,10 +564,8 @@ export const mainAlgorithm = () => {
         crossesForCloseTag.forEach(e => {
           e.addEventListener('click', el => {
 
-            // Fermeture et reset de la box à la suppression d'un tag
+            // Reset de la box au choix d'un item
             document.querySelectorAll('form.box__search').forEach(e => e.reset());
-            utensilButton.style.display = 'flex';
-            utensilBox.style.display = 'none';
 
             // Récupération à chaque suppression de tag, des recettes trouvées avec la recherche principale
             recipesAfterCloseTag = firstRecipesFound;
@@ -696,10 +690,8 @@ export const mainAlgorithm = () => {
         displayRecipes(mainContentBlock, refineRecipesFound);
         displayAllItemBoxes(refineIngredientList, refineDeviceList, refineUtensilList);
 
-        // Fermeture et reset de la box au choix d'un item
+        // Reset de la box au choix d'un item
         document.querySelectorAll('form.box__search').forEach(e => e.reset());
-        ingredientButton.style.display = 'flex';
-        ingredientBox.style.display = 'none';
 
         // Fixe le résultat si affinage de la recherche
         recipesFound = refineRecipesFound;
@@ -715,10 +707,8 @@ export const mainAlgorithm = () => {
         crossesForCloseTag.forEach(e => {
           e.addEventListener('click', el => {
 
-            // Fermeture et reset de la box à la suppression d'un tag
+            // Reset de la box au choix d'un item
             document.querySelectorAll('form.box__search').forEach(e => e.reset());
-            ingredientButton.style.display = 'flex';
-            ingredientBox.style.display = 'none';
 
             // Récupération à chaque suppression de tag, des recettes trouvées avec la recherche principale
             recipesAfterCloseTag = firstRecipesFound;
@@ -840,10 +830,8 @@ export const mainAlgorithm = () => {
         displayRecipes(mainContentBlock, refineRecipesFound);
         displayAllItemBoxes(refineIngredientList, refineDeviceList, refineUtensilList);
 
-        // Fermeture et reset de la box au choix d'un item
+        // Reset de la box au choix d'un item
         document.querySelectorAll('form.box__search').forEach(e => e.reset());
-        deviceButton.style.display = 'flex';
-        deviceBox.style.display = 'none';
 
         // Fixe le résultat si affinage de la recherche
         recipesFound = refineRecipesFound;
@@ -859,10 +847,8 @@ export const mainAlgorithm = () => {
         crossesForCloseTag.forEach(e => {
           e.addEventListener('click', el => {
 
-            // Fermeture et reset de la box à la suppression d'un tag
+            // Reset de la box au choix d'un item
             document.querySelectorAll('form.box__search').forEach(e => e.reset());
-            deviceButton.style.display = 'flex';
-            deviceBox.style.display = 'none';
 
             // Récupération à chaque suppression de tag, des recettes trouvées avec la recherche principale
             recipesAfterCloseTag = firstRecipesFound;
@@ -986,10 +972,8 @@ export const mainAlgorithm = () => {
         displayRecipes(mainContentBlock, refineRecipesFound);
         displayAllItemBoxes(refineIngredientList, refineDeviceList, refineUtensilList);
 
-        // Fermeture et reset de la box au choix d'un item
+        // Reset de la box au choix d'un item
         document.querySelectorAll('form.box__search').forEach(e => e.reset());
-        utensilButton.style.display = 'flex';
-        utensilBox.style.display = 'none';
 
         // Fixe le résultat si affinage de la recherche
         recipesFound = refineRecipesFound;
@@ -1005,10 +989,8 @@ export const mainAlgorithm = () => {
         crossesForCloseTag.forEach(e => {
           e.addEventListener('click', el => {
 
-            // Fermeture et reset de la box à la suppression d'un tag
+            // Reset de la box au choix d'un item
             document.querySelectorAll('form.box__search').forEach(e => e.reset());
-            utensilButton.style.display = 'flex';
-            utensilBox.style.display = 'none';
 
             // Récupération à chaque suppression de tag, des recettes trouvées avec la recherche principale
             recipesAfterCloseTag = firstRecipesFound;
