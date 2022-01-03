@@ -118,7 +118,7 @@ export const mainAlgorithm = () => {
     resetAllList();
     displayRecipes(mainContentBlock, recipesFound);
     displayAllItemBoxes(ingredientList, deviceList, utensilList);
-    
+
     const userSearch = new RegExp('\\b' + formatString(e.target.value), 'gi');
 
     // Déclenchement de la recherche au troisième caractère saisi
@@ -196,7 +196,7 @@ export const mainAlgorithm = () => {
       // = Display console
       logAfterMainSearch(recipesFound, ingredientList, deviceList, utensilList);
       // - Affichage par défaut --- END
-      
+
     }
 
   });
@@ -225,11 +225,11 @@ export const mainAlgorithm = () => {
     document.querySelectorAll('li.li-ingredient').forEach(e => {
       e.addEventListener('click', el => {
 
-        // Affichage des tags
-        displayTags(el);
-
         // Stockage des tags sélectionnés (noms d'ingrédients) dans le tableau dédié
         tagStockIngredient.push(formatString(el.target.innerText));
+
+        // Affichage des tags
+        displayTags(el, tagStockIngredient);
 
         // Placement du block principal
         setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
@@ -367,11 +367,11 @@ export const mainAlgorithm = () => {
     document.querySelectorAll('li.li-device').forEach(e => {
       e.addEventListener('click', el => {
 
-        // Affichage des tags
-        displayTags(el);
-
         // Stockage des tags sélectionnés (noms d'appareils) dans le tableau dédié
         tagStockDevice.push(formatString(el.target.innerText));
+
+        // Affichage des tags
+        displayTags(el, tagStockDevice);
 
         // Placement du block principal
         setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
@@ -507,11 +507,11 @@ export const mainAlgorithm = () => {
     document.querySelectorAll('li.li-utensil').forEach(e => {
       e.addEventListener('click', el => {
 
-        // Affichage des tags
-        displayTags(el);
-
         // Stockage des tags sélectionnés (noms d'ustensiles) dans le tableau dédié
         tagStockUtensil.push(formatString(el.target.innerText));
+
+        // Affichage des tags
+        displayTags(el, tagStockUtensil);
 
         // Placement du block principal
         setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
@@ -639,9 +639,6 @@ export const mainAlgorithm = () => {
     document.querySelectorAll('li.li-ingredient').forEach(e => {
       e.addEventListener('click', el => {
 
-        // Affichage des tags
-        displayTags(el);
-
         const userRefineSearch = new RegExp('\\b' + formatString(el.target.innerText), 'gi');
 
         const byUserInput = (element) => {
@@ -657,6 +654,11 @@ export const mainAlgorithm = () => {
 
         // Stockage des tags sélectionnés (noms d'ingrédients) dans le tableau dédié
         tagStockIngredient.push(formatString(el.target.innerText));
+
+        tagStockIngredient = Array.from(new Set(tagStockIngredient));
+
+        // Affichage des tags
+        displayTags(el, tagStockIngredient);
 
         // Placement du block principal
         setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
@@ -724,6 +726,8 @@ export const mainAlgorithm = () => {
             // Suppression de l'ingrédient de la liste des tags choisis
             tagStockIngredient = tagStockIngredient.filter(ingredient => formatString(ingredient) !== formatString(el.target.parentElement.dataset.ingredient));
 
+            tagStockIngredient = Array.from(new Set(tagStockIngredient));
+
             // Placement du block principal
             setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
@@ -781,9 +785,6 @@ export const mainAlgorithm = () => {
     document.querySelectorAll('li.li-device').forEach(e => {
       e.addEventListener('click', el => {
 
-        // Affichage des tags
-        displayTags(el);
-
         const userRefineSearch = new RegExp('\\b' + formatString(el.target.innerText), 'gi');
 
         const byUserInput = (element) => {
@@ -799,6 +800,11 @@ export const mainAlgorithm = () => {
 
         // Stockage des tags sélectionnés (noms d'appareils) dans le tableau dédié
         tagStockDevice.push(formatString(el.target.innerText));
+
+        tagStockDevice = Array.from(new Set(tagStockDevice));
+
+        // Affichage des tags
+        displayTags(el, tagStockDevice);
 
         // Placement du block principal
         setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
@@ -864,6 +870,8 @@ export const mainAlgorithm = () => {
             // Suppression de l'appareil de la liste des tags choisis
             tagStockDevice = tagStockDevice.filter(appareil => formatString(appareil) !== formatString(el.target.parentElement.dataset.device));
 
+            tagStockDevice = Array.from(new Set(tagStockDevice));
+
             // Placement du block principal
             setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
@@ -921,9 +929,6 @@ export const mainAlgorithm = () => {
     document.querySelectorAll('li.li-utensil').forEach(e => {
       e.addEventListener('click', el => {
 
-        // Affichage des tags
-        displayTags(el);
-
         const userRefineSearch = new RegExp('\\b' + formatString(el.target.innerText), 'gi');
 
         const byUserInput = (element) => {
@@ -939,6 +944,11 @@ export const mainAlgorithm = () => {
 
         // Stockage des tags sélectionnés (noms d'ustensiles) dans le tableau dédié
         tagStockUtensil.push(formatString(el.target.innerText));
+
+        tagStockUtensil = Array.from(new Set(tagStockUtensil));
+
+        // Affichage des tags
+        displayTags(el, tagStockUtensil);
 
         // Placement du block principal
         setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
@@ -1005,6 +1015,8 @@ export const mainAlgorithm = () => {
 
             // Suppression de l'ustensile de la liste des tags choisis
             tagStockUtensil = tagStockUtensil.filter(ustensile => formatString(ustensile) !== formatString(el.target.parentElement.dataset.utensil));
+
+            tagStockDevice = Array.from(new Set(tagStockDevice));
 
             // Placement du block principal
             setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);

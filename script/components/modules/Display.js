@@ -144,39 +144,46 @@ export const displayRecipes = (whereToInject, recipesFound) => {
 
 // ********************************************************
 
-export const displayTags = (element) => {
+export const displayTags = (element, array) => {
 
   const ingredientRow = document.querySelector('div.ingredient-row');
   const deviceRow = document.querySelector('div.device-row');
   const utensilRow = document.querySelector('div.utensil-row');
 
   if (element.target.className === 'li li-ingredient') {
-    console.log('true');
-    ingredientRow.innerHTML +=
-      `
-            <div class="tags-row__tag tags-row__tag--ingredient" data-ingredient="${element.target.innerText}">
-              <p>${element.target.innerText}</p>
-              <span class="far fa-times-circle circle-ingredient"></span>
-            </div>
-          `;
+    ingredientRow.innerHTML = (
+      array.map(ingredient =>
+        `
+          <div class="tags-row__tag tags-row__tag--ingredient" data-ingredient="${ingredient}">
+            <p>${ingredient}</p>
+            <span class="far fa-times-circle circle-ingredient"></span>
+          </div>
+        `
+      ).join('')
+    );
   } else if (element.target.className === 'li li-device') {
-    deviceRow.innerHTML +=
-      `
-            <div class="tags-row__tag tags-row__tag--device" data-device="${element.target.innerText}">
-              <p>${element.target.innerText}</p>
-              <span class="far fa-times-circle circle-device"></span>
-            </div>
-          `;
+    deviceRow.innerHTML = (
+      array.map(device =>
+        `
+          <div class="tags-row__tag tags-row__tag--device" data-device="${device}">
+            <p>${device}</p>
+            <span class="far fa-times-circle circle-device"></span>
+          </div>
+        `
+      ).join('')
+    );
   } else if (element.target.className === 'li li-utensil') {
-    utensilRow.innerHTML +=
-      `
-            <div class="tags-row__tag tags-row__tag--utensil" data-utensil="${element.target.innerText}">
-              <p>${element.target.innerText}</p>
-              <span class="far fa-times-circle circle-utensil"></span>
-            </div>
-          `;
+    utensilRow.innerHTML = (
+      array.map(utensil =>
+        `
+          <div class="tags-row__tag tags-row__tag--utensil" data-utensil="${utensil}">
+            <p>${utensil}</p>
+            <span class="far fa-times-circle circle-utensil"></span>
+          </div>
+        `
+      ).join('')
+    );
   }
-
 };
 
 // ********************************************************
