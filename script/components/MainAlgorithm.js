@@ -226,7 +226,7 @@ export const mainAlgorithm = () => {
       e.addEventListener('click', el => {
 
         // Stockage des tags sélectionnés (noms d'ingrédients) dans le tableau dédié
-        tagStockIngredient.push(formatString(el.target.innerText));
+        tagStockIngredient.push(el.target.innerText);
 
         // Affichage des tags
         displayTags(el, tagStockIngredient);
@@ -368,7 +368,7 @@ export const mainAlgorithm = () => {
       e.addEventListener('click', el => {
 
         // Stockage des tags sélectionnés (noms d'appareils) dans le tableau dédié
-        tagStockDevice.push(formatString(el.target.innerText));
+        tagStockDevice.push(el.target.innerText);
 
         // Affichage des tags
         displayTags(el, tagStockDevice);
@@ -508,7 +508,7 @@ export const mainAlgorithm = () => {
       e.addEventListener('click', el => {
 
         // Stockage des tags sélectionnés (noms d'ustensiles) dans le tableau dédié
-        tagStockUtensil.push(formatString(el.target.innerText));
+        tagStockUtensil.push(el.target.innerText);
 
         // Affichage des tags
         displayTags(el, tagStockUtensil);
@@ -653,7 +653,7 @@ export const mainAlgorithm = () => {
         displayItemBoxes(ingredientButton, ingredientBox, contentIngredientList, refineIngredientList);
 
         // Stockage des tags sélectionnés (noms d'ingrédients) dans le tableau dédié
-        tagStockIngredient.push(formatString(el.target.innerText));
+        tagStockIngredient.push(el.target.innerText);
 
         tagStockIngredient = Array.from(new Set(tagStockIngredient));
 
@@ -799,7 +799,7 @@ export const mainAlgorithm = () => {
         displayItemBoxes(deviceButton, deviceBox, contentDeviceList, refineDeviceList);
 
         // Stockage des tags sélectionnés (noms d'appareils) dans le tableau dédié
-        tagStockDevice.push(formatString(el.target.innerText));
+        tagStockDevice.push(el.target.innerText);
 
         tagStockDevice = Array.from(new Set(tagStockDevice));
 
@@ -943,7 +943,7 @@ export const mainAlgorithm = () => {
         displayItemBoxes(utensilButton, utensilBox, contentUtensilList, refineUtensilList);
 
         // Stockage des tags sélectionnés (noms d'ustensiles) dans le tableau dédié
-        tagStockUtensil.push(formatString(el.target.innerText));
+        tagStockUtensil.push(el.target.innerText);
 
         tagStockUtensil = Array.from(new Set(tagStockUtensil));
 
