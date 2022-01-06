@@ -15,9 +15,10 @@
 
 .main {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  column-gap: 2%;
-  row-gap: 25px;
+  column-gap: 50px;
+  row-gap: 50px;
   top: 340px;
   max-width: 1240px;
   margin: 0 100px 0 auto;

@@ -126,9 +126,10 @@ input {
 
 .main {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  column-gap: 2%;
-  row-gap: 25px;
+  column-gap: 50px;
+  row-gap: 50px;
   top: 340px;
   max-width: 1240px;
   margin: 0 100px 0 auto;
@@ -238,13 +239,14 @@ input {
   background-color: #ed6454;
 }
 .buttons-row .fa-chevron-down {
+  margin-left: 20px;
   font-size: 16px;
 }
 
 .recipe {
   display: flex;
   flex-direction: column;
-  width: 32%;
+  width: 380px;
   height: 364px;
   border-radius: 5px;
   overflow: hidden;
@@ -259,6 +261,10 @@ input {
   background-color: #e7e7e7;
 }
 
+.high-group-recipe {
+  align-items: flex-start;
+  height: 45px;
+}
 .high-group-recipe__title {
   font-size: 18px;
 }
@@ -281,22 +287,30 @@ input {
 .low-group-recipe {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
 }
 .low-group-recipe__list {
   width: 50%;
   height: 100px;
+  padding-right: 20px;
+  padding-top: 5px;
+  overflow: hidden;
+  line-height: 15.5px;
 }
 .low-group-recipe .li {
   font-size: 12px;
   font-weight: 700;
 }
+.low-group-recipe .li .quantity {
+  font-weight: 400;
+}
 .low-group-recipe__task {
   width: 50%;
   height: 100px;
+  padding-top: 5px;
+  overflow: hidden;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  overflow: hidden;
+  line-height: 15.5px;
 }
 
 .box {

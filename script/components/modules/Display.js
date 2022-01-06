@@ -2,13 +2,34 @@
 
 const calculateHeightList = (array) => {
   let len = array.length;
-  if (len > 0) {
-    while (len % 3 !== 0) {
-      len++;
+
+  if (window.innerWidth <= 1080) {
+    if (len > 0) {
+      while (len % 1 !== 0) {
+        len++;
+      }
+      return ((len / 1) * 32) + 20;
+    } else {
+      return 0;
     }
-    return ((len / 3) * 32) + 20;
+  } else if (window.innerWidth <= 1220) {
+    if (len > 0) {
+      while (len % 2 !== 0) { 
+        len++;
+      }
+      return ((len / 2) * 32) + 20;
+    } else {
+      return 0;
+    }
   } else {
-    return 0;
+    if (len > 0) {
+      while (len % 3 !== 0) {
+        len++;
+      }
+      return ((len / 3) * 32) + 20;
+    } else {
+      return 0;
+    }
   }
 };
 
@@ -108,9 +129,11 @@ const displayIngredients = (recipe) => {
     ingredientsList += `
   <p class="li">
   ${recipe.ingredients[i].ingredient}
+  <span class="quantity">
   ${recipe.ingredients[i].quantity !== undefined ? ':&nbsp' : ''}
   ${recipe.ingredients[i].quantity !== undefined ? recipe.ingredients[i].quantity : ''} 
-  ${recipe.ingredients[i].unit !== undefined ? recipe.ingredients[i].unit : ''} 
+  ${recipe.ingredients[i].unit !== undefined ? recipe.ingredients[i].unit : ''}
+  </span>
   </p>`;
   }
   return ingredientsList;
