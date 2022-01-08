@@ -11,20 +11,42 @@
   width: 100%;
   max-width: $page-max-width;
   padding: 42px 100px;
+
+  @include md {
+    padding: 20px;
+  }
+
+  @include xxs {
+    padding: 10px;
+  }
 }
 
 .main {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  column-gap: 50px;
-  row-gap: 50px;
+  column-gap: 3.5%;
+  row-gap: 43px;
   top: 340px;
   max-width: 1240px;
-  margin: 0 100px 0 auto;
   padding-bottom: 20px;
-  position: absolute;
-  z-index: -1;
+
+  @include xl {
+    row-gap: 33px;
+  }
+
+  @include lg {
+    column-gap: 10%;
+  }
+
+  @include md {
+    column-gap: 5%;
+  }
+
+  @include sm {
+    justify-content: center;
+    row-gap: 20px;
+  }
+
 }
 
 // * End

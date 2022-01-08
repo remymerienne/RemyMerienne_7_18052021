@@ -2,7 +2,6 @@
 
 const calculateHeightList = (array) => {
   let len = array.length;
-
   if (window.innerWidth <= 1080) {
     if (len > 0) {
       while (len % 1 !== 0) {
@@ -14,7 +13,7 @@ const calculateHeightList = (array) => {
     }
   } else if (window.innerWidth <= 1220) {
     if (len > 0) {
-      while (len % 2 !== 0) { 
+      while (len % 2 !== 0) {
         len++;
       }
       return ((len / 2) * 32) + 20;
@@ -100,19 +99,28 @@ export const displayItemBoxes = (button, box, list, array) => {
 
   });
 
-  // Mise en page des liste selon le nombre de résultat
-  if (array.length === 0) {
-    list.style.paddingBottom = '0';
-    list.style.width = '300px';
-  } else if (array.length <= 1) {
+  if (window.innerWidth <= 660) {
+
     list.style.paddingBottom = '20px';
-    list.style.width = '300px';
-  } else if (array.length === 2) {
-    list.style.paddingBottom = '20px';
-    list.style.width = '450px';
+    list.style.width = '285px';
+
   } else {
-    list.style.paddingBottom = '20px';
-    list.style.width = '670px';
+
+    // Mise en page des liste selon le nombre de résultat
+    if (array.length === 0) {
+      list.style.paddingBottom = '0';
+      list.style.width = '300px';
+    } else if (array.length <= 1) {
+      list.style.paddingBottom = '20px';
+      list.style.width = '300px';
+    } else if (array.length === 2) {
+      list.style.paddingBottom = '20px';
+      list.style.width = '450px';
+    } else {
+      list.style.paddingBottom = '20px';
+      list.style.width = '670px';
+    }
+
   }
 
   // Calcul de la hauteur de la lise et affichage
@@ -206,31 +214,6 @@ export const displayTags = (element, array) => {
         `
       ).join('')
     );
-  }
-};
-
-// ********************************************************
-
-const checkLength = (list) => {
-  if (list.length !== 0) {
-    return 1;
-  } else {
-    return 0;
-  }
-};
-
-// ==========================
-
-export const setMainTop = (node, tagStockIngredient, tagStockDevice, tagStockUtensil) => {
-  const numberOfTagRow = checkLength(tagStockIngredient) + checkLength(tagStockDevice) + checkLength(tagStockUtensil);
-  if (numberOfTagRow === 0) {
-    node.style.top = '340px';
-  } else if (numberOfTagRow === 1) {
-    node.style.top = '390px';
-  } else if (numberOfTagRow === 2) {
-    node.style.top = '443px';
-  } else if (numberOfTagRow === 3) {
-    node.style.top = '495px';
   }
 };
 

@@ -4,8 +4,7 @@ import {
 import {
   displayItemBoxes,
   displayRecipes,
-  displayTags,
-  setMainTop
+  displayTags
 } from './modules/Display';
 import {
   fullLogAfterCloseTag,
@@ -108,7 +107,7 @@ export const mainAlgorithm = () => {
     document.querySelectorAll('div.tags-row__tag').forEach((e) => e.style.display = 'none');
 
     // Placement du block principal
-    setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
+    // setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
     // = Display console
     console.clear();
@@ -231,9 +230,6 @@ export const mainAlgorithm = () => {
         // Affichage des tags
         displayTags(el, tagStockIngredient);
 
-        // Placement du block principal
-        setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
-
         // = Display console
         logTagStock(tagStockIngredient, tagStockDevice, tagStockUtensil);
 
@@ -288,15 +284,12 @@ export const mainAlgorithm = () => {
 
             // Reset de la box au choix d'un item
             document.querySelectorAll('form.box__search').forEach(e => e.reset());
-            
+
             // Récupération à chaque suppression de tag, des recettes trouvées avec la recherche principale
             recipesAfterCloseTag = firstRecipesFound;
 
             // Suppression de l'ingrédient de la liste des tags choisis
             tagStockIngredient = tagStockIngredient.filter(ingredient => formatString(ingredient) !== formatString(el.target.parentElement.dataset.ingredient));
-
-            // Placement du block principal
-            setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
             // Replacement de l'ingrédient dans la liste affiché
             refineIngredientList.push(el.target.parentElement.dataset.ingredient);
@@ -371,9 +364,6 @@ export const mainAlgorithm = () => {
         // Affichage des tags
         displayTags(el, tagStockDevice);
 
-        // Placement du block principal
-        setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
-
         // = Display console
         logTagStock(tagStockIngredient, tagStockDevice, tagStockUtensil);
 
@@ -432,9 +422,6 @@ export const mainAlgorithm = () => {
 
             // Suppression de l'appareil de la liste des tags choisis
             tagStockDevice = tagStockDevice.filter(appareil => formatString(appareil) !== formatString(el.target.parentElement.dataset.device));
-
-            // Placement du block principal
-            setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
             // Replacement de l'appareil dans la liste affiché
             refineDeviceList.push(el.target.parentElement.dataset.device);
@@ -509,9 +496,6 @@ export const mainAlgorithm = () => {
         // Affichage des tags
         displayTags(el, tagStockUtensil);
 
-        // Placement du block principal
-        setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
-
         // = Display console
         logTagStock(tagStockIngredient, tagStockDevice, tagStockUtensil);
 
@@ -572,9 +556,6 @@ export const mainAlgorithm = () => {
 
             // Suppression de l'ustensile de la liste des tags choisis
             tagStockUtensil = tagStockUtensil.filter(ustensile => formatString(ustensile) !== formatString(el.target.parentElement.dataset.utensil));
-
-            // Placement du block principal
-            setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
             // Replacement de l'ustensile dans la liste affiché
             refineUtensilList.push(el.target.parentElement.dataset.utensil);
@@ -654,9 +635,6 @@ export const mainAlgorithm = () => {
         // Affichage des tags
         displayTags(el, tagStockIngredient);
 
-        // Placement du block principal
-        setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
-
         // = Display console
         logTagStock(tagStockIngredient, tagStockDevice, tagStockUtensil);
 
@@ -717,9 +695,6 @@ export const mainAlgorithm = () => {
             tagStockIngredient = tagStockIngredient.filter(ingredient => formatString(ingredient) !== formatString(el.target.parentElement.dataset.ingredient));
 
             tagStockIngredient = Array.from(new Set(tagStockIngredient));
-
-            // Placement du block principal
-            setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
             // Replacement de l'ingrédient dans la liste affiché
             refineIngredientList.push(el.target.parentElement.dataset.ingredient);
@@ -796,9 +771,6 @@ export const mainAlgorithm = () => {
         // Affichage des tags
         displayTags(el, tagStockDevice);
 
-        // Placement du block principal
-        setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
-
         // = Display console
         logTagStock(tagStockIngredient, tagStockDevice, tagStockUtensil);
 
@@ -857,9 +829,6 @@ export const mainAlgorithm = () => {
             tagStockDevice = tagStockDevice.filter(appareil => formatString(appareil) !== formatString(el.target.parentElement.dataset.device));
 
             tagStockDevice = Array.from(new Set(tagStockDevice));
-
-            // Placement du block principal
-            setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
             // Replacement de l'appareil dans la liste affiché
             refineDeviceList.push(el.target.parentElement.dataset.device);
@@ -936,9 +905,6 @@ export const mainAlgorithm = () => {
         // Affichage des tags
         displayTags(el, tagStockUtensil);
 
-        // Placement du block principal
-        setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
-
         // = Display console
         logTagStock(tagStockIngredient, tagStockDevice, tagStockUtensil);
 
@@ -999,9 +965,6 @@ export const mainAlgorithm = () => {
             tagStockUtensil = tagStockUtensil.filter(ustensile => formatString(ustensile) !== formatString(el.target.parentElement.dataset.utensil));
 
             tagStockDevice = Array.from(new Set(tagStockDevice));
-
-            // Placement du block principal
-            setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
 
             // Replacement de l'ustensile dans la liste affiché
             refineUtensilList.push(el.target.parentElement.dataset.utensil);
