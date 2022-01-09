@@ -273,10 +273,12 @@
     width: 50%;
     height: 100px;
     padding-top: 5px;
+
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 6;
     overflow: hidden;
+
     font-family: $task-font-stack;
     font-size: 12px;
     line-height: 15.7px;
@@ -288,8 +290,7 @@
 
 .box {
   display: none;
-  position: absolute;
-  overflow: hidden;
+  margin-bottom: 20px;
   border-radius: 5px;
   color: #ffffff;
   font-size: 18px;
@@ -300,9 +301,17 @@
     background-color: $background-ingredient-color;
   }
 
+  &-ingredient {
+    margin-right: 20px;
+  }
+
   &-device,
   &-device input {
     background-color: $background-device-color;
+  }
+
+  &-device {
+    margin-right: 20px;
   }
 
   &-utensil,
@@ -314,6 +323,10 @@
     @extend %flex-between;
     height: 69px;
     padding: 0 20px;
+
+    @include md {
+      height: 50px;
+    }
 
     input {
       width: 85%;
@@ -357,42 +370,7 @@
     }
   }
 
-  // - Projet error message
-  // .error {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-around;
-  //   width: 100%;
-
-  //   &::after {
-  //     font-family: "Font Awesome 5 Free";
-  //     font-weight: 900;
-  //     content: "\f119";
-  //     font-size: 30px;
-  //   }
-  // }
 }
-
-// - Projet texture
-// .texture-content {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 60vh;
-//   margin-top: 20px;
-//   border-radius: 5px;
-//   overflow: hidden;
-
-//   &__img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-
-//   p {
-//     position: absolute;
-//   }
-// }
 
 // * End
 // * ------------------------

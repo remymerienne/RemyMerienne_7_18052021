@@ -1,33 +1,81 @@
 // ********************************************************
 
-const calculateHeightList = (array) => {
+const addJsOpenClassToButton = () => {
+  document.querySelectorAll('button').forEach(e => {
+    e.classList.add('js-open');
+  });
+};
+
+// ==========================
+
+const openList = (button, box) => {
+  button.style.display = 'none';
+  box.style.display = 'initial';
+  button.classList.remove('js-open');
+};
+
+// ==========================
+
+const closeList = (button, box) => {
+  const page = document.querySelector('.page');
+  const selectForClose = '.main, .js-open, .fa-chevron-up, .search-bar, .header, .tags-row, .li';
+  const NodesForClose = Array.from(page.querySelectorAll(selectForClose));
+  NodesForClose.forEach(e => {
+    e.addEventListener('click', () => {
+      button.style.display = 'flex';
+      box.style.display = 'none';
+    });
+  });
+};
+
+// ==========================
+
+const setListWidth = (list, array) => {
+  if (array.length === 0) {
+    list.style.paddingBottom = '0';
+    list.style.width = '300px';
+  } else if (array.length === 1 || window.innerWidth <= 1029) {
+    list.style.paddingBottom = '20px';
+    list.style.width = '300px';
+  } else if (array.length === 2 || (window.innerWidth <= 1249 && window.innerWidth > 1029)) {
+    list.style.paddingBottom = '20px';
+    list.style.width = '450px';
+  } else {
+    list.style.paddingBottom = '20px';
+    list.style.width = '670px';
+  }
+};
+
+// ==========================
+
+const setHeightList = (list, array) => {
   let len = array.length;
-  if (window.innerWidth <= 1080) {
-    if (len > 0) {
-      while (len % 1 !== 0) {
-        len++;
-      }
-      return ((len / 1) * 32) + 20;
-    } else {
-      return 0;
-    }
-  } else if (window.innerWidth <= 1220) {
+  if (window.innerWidth <= 1249 && window.innerWidth > 1029) {
     if (len > 0) {
       while (len % 2 !== 0) {
         len++;
       }
-      return ((len / 2) * 32) + 20;
+      list.style.height = `${((len / 2) * 32) + 20}px`;
     } else {
-      return 0;
+      list.style.height = `${0}px`;
+    }
+  } else if (window.innerWidth <= 1029) {
+    if (len > 0) {
+      while (len % 1 !== 0) {
+        len++;
+      }
+      list.style.height = `${((len / 1) * 32) + 20}px`;
+    } else {
+      list.style.height = `${0}px`;
     }
   } else {
     if (len > 0) {
       while (len % 3 !== 0) {
         len++;
       }
-      return ((len / 3) * 32) + 20;
+      list.style.height = `${((len / 3) * 32) + 20}px`;
     } else {
-      return 0;
+      list.style.height = `${0}px`;
     }
   }
 };
@@ -69,63 +117,40 @@ const displayList = (whereToInject, array) => {
 
 // ==========================
 
+const setMainTop = () => {
+  const position = document.querySelector('div.buttons-row').getBoundingClientRect();
+  if (window.innerWidth <= 928 && window.innerWidth > 589) {
+    document.querySelector('main.main').style.top = `${position.top + 74}px`;
+  } else if (window.innerWidth <= 589 && window.innerWidth > 399) {
+    document.querySelector('main.main').style.top = `${position.top + 143}px`;
+  } else if (window.innerWidth <= 399) {
+    document.querySelector('main.main').style.top = `${position.top + 212}px`;
+  } else {
+    document.querySelector('main.main').style.top = `${position.top + 93}px`;
+  }
+};
+
+// ==========================
+
 export const displayItemBoxes = (button, box, list, array) => {
 
   button.addEventListener('click', () => {
 
-    // Ajout de classe # à tous les boutons
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach(e => {
-      e.classList.add('js-open');
-    });
+    addJsOpenClassToButton();
 
-    // Ouverture des listes au click sur bouton
-    button.style.display = 'none';
-    box.style.display = 'initial';
-    button.classList.remove('js-open');
+    openList(button, box);
 
-    // Définition des zones de click pour fermeture des listes 
-    const page = document.querySelector('.page');
-    const selectForClose = '.main, .page, .js-open, .fa-chevron-up, .search-bar, .header, .tags-row, .li';
-    const NodesForClose = Array.from(page.querySelectorAll(selectForClose));
-
-    // Fermeture des listes ...
-    NodesForClose.forEach(e => {
-      e.addEventListener('click', () => {
-        button.style.display = 'flex';
-        box.style.display = 'none';
-      });
-    });
+    closeList(button, box);
 
   });
 
-  if (window.innerWidth <= 660) {
+  setListWidth(list, array);
 
-    list.style.paddingBottom = '20px';
-    list.style.width = '285px';
+  setHeightList(list, array);
 
-  } else {
-
-    // Mise en page des liste selon le nombre de résultat
-    if (array.length === 0) {
-      list.style.paddingBottom = '0';
-      list.style.width = '300px';
-    } else if (array.length <= 1) {
-      list.style.paddingBottom = '20px';
-      list.style.width = '300px';
-    } else if (array.length === 2) {
-      list.style.paddingBottom = '20px';
-      list.style.width = '450px';
-    } else {
-      list.style.paddingBottom = '20px';
-      list.style.width = '670px';
-    }
-
-  }
-
-  // Calcul de la hauteur de la lise et affichage
-  list.style.height = `${calculateHeightList(array)}px`;
   displayList(list, array);
+
+  setMainTop();
 
 };
 
@@ -217,4 +242,5 @@ export const displayTags = (element, array) => {
   }
 };
 
-// ********************************************************
+// * END
+// ****************

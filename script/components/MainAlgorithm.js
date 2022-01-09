@@ -54,9 +54,6 @@ let tagStockIngredient = [];
 let tagStockDevice = [];
 let tagStockUtensil = [];
 
-// ! Projet error message
-// const inputZone = document.querySelectorAll('.box__search');
-
 // ========================================================
 
 const displayAllItemBoxes = (ingredientList, deviceList, utensilList) => {
@@ -157,11 +154,6 @@ export const mainAlgorithm = () => {
         displayRecipes(mainContentBlock, recipesFound);
         displayAllItemBoxes(ingredientList, deviceList, utensilList);
         mainContentBlock.innerHTML = '<p>Aucune recette ne correspond à votre recherche</p>';
-
-        // ! Projet error message
-        // inputZone.forEach(e=> {
-        //   e.innerHTML = '<p class="error">Aucun résultat</p>';
-        // });
 
         // Affichage des recettes et des listes trouvées
       } else {

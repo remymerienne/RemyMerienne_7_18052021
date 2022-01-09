@@ -22,13 +22,17 @@
 }
 
 .main {
+
+  margin-right: 100px;
+  position: absolute;
+  max-width: 1240px;
+  z-index: -1;
+
   display: flex;
   flex-wrap: wrap;
   column-gap: 3.5%;
   row-gap: 43px;
-  top: 340px;
-  max-width: 1240px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 
   @include xl {
     row-gap: 33px;
@@ -40,6 +44,7 @@
 
   @include md {
     column-gap: 5%;
+    margin-right: 20px;
   }
 
   @include sm {

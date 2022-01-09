@@ -1675,3 +1675,7 @@ export const recipes =
     'ustensils': ['Rouleau à patisserie', 'Fouet']
   }
 ];
+
+// * END
+// ****************
+
