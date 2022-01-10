@@ -74,12 +74,13 @@ $task-font-stack: (
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'xl': 1187px,
-  'lg': 970px,
-  'md': 750px,
-  'sm': 480px,
-  'xs': 375px,
-);
+  'xl': 1332px,
+  'lg': 1258px,
+  'md': 928px,
+  'sm': 730px,
+  'xs': 589px,
+  'xxs': 374px
+  );
 
 // * End
 // * ------------------------

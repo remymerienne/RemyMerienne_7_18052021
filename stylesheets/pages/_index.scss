@@ -24,6 +24,10 @@
 
   &__logo {
     width: 50px;
+
+    @include md {
+      height: 35px;
+    }
   }
 
   &__title {
@@ -32,6 +36,10 @@
     font-family: $title-font-stack;
     font-size: 36px;
     font-weight: 700;
+
+    @include md {
+      font-size: 30px;
+    }
   }
 }
 
@@ -47,12 +55,17 @@
   background-color: $background-light-color;
   border-radius: 5px;
 
+  @include md {
+    height: 50px;
+  }
+
   &__input {
     width: 95%;
     height: 50px;
     background-color: $background-light-color;
     color: #000000;
     font-size: 18px;
+    text-overflow: ellipsis;
 
     &::placeholder {
       color: #000000;
@@ -62,6 +75,10 @@
 
   &__logo {
     font-size: 32px;
+
+    @include md {
+      font-size: 25px;
+    }
   }
 }
 
@@ -70,6 +87,7 @@
 
 .tags-row {
   display: flex;
+  flex-wrap: wrap;
 
   &__tag--ingredient {
     background-color: $background-ingredient-color;
@@ -95,15 +113,16 @@
 .buttons-row {
   display: flex;
   margin-top: 15px;
+  flex-wrap: wrap;
 
   &__button--ingredient {
+    margin-right: 20px;
     background-color: $background-ingredient-color;
   }
 
   &__button--device {
-    background-color: $background-device-color;
-    margin-left: 20px;
     margin-right: 20px;
+    background-color: $background-device-color;
   }
 
   &__button--utensil {
@@ -111,6 +130,7 @@
   }
 
   .fa-chevron-down {
+    margin-left: 20px;
     font-size: 16px;
   }
 }
@@ -124,10 +144,31 @@
 .recipe {
   display: flex;
   flex-direction: column;
-  width: 32%;
+  width: 31%;
+  min-width: 328px;
   height: 364px;
   border-radius: 5px;
   overflow: hidden;
+
+  @include lg {
+    width: 45%;
+  }
+
+  @include md {
+    width: 47.5%;
+  }
+
+  @include sm {
+    width: 65%;
+  }
+
+  @include xs {
+    width: 100%;
+  }
+
+  @include xxs {
+    min-width: unset;
+  }
 
   &__photo {
     height: 178px;
@@ -138,6 +179,10 @@
     height: 186px;
     padding: 20px;
     background-color: $background-light-color;
+
+    @include xxs {
+      padding: 10px;
+    }
   }
 }
 
@@ -146,9 +191,16 @@
 
 .high-group-recipe {
   @extend %flex-between;
+  align-items: flex-start;
+  height: 45px;
 
   &__title {
     font-size: 18px;
+
+    @include xl {
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
 
   &__time,
@@ -157,17 +209,38 @@
     font-weight: 700;
   }
 
+  &__time {
+    @include xl {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+    }
+  }
+
   &__time::before {
+    margin-left: 10px;
     margin-right: 7px;
     font-family: "Font Awesome 5 Free";
     font-weight: 400;
     content: "\f017";
     font-size: 20px;
+
+    @include xl {
+      font-size: 15px;
+    }
+
+    @include xxs {
+      margin-left: 5px;
+    }
   }
 
   &__time::after {
     margin-left: 5px;
     content: 'min';
+
+    @include xl {
+      font-size: 15px;
+    }
   }
 }
 
@@ -177,24 +250,38 @@
 .low-group-recipe {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
 
   &__list {
     width: 50%;
     height: 100px;
+    padding-right: 20px;
+    padding-top: 5px;
+    overflow: hidden;
+    line-height: 15.7px;
   }
 
   .li {
     font-size: 12px;
     font-weight: 700;
+
+    .quantity {
+      font-weight: 400;
+    }
   }
 
   &__task {
     width: 50%;
     height: 100px;
+    padding-top: 5px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+
     font-family: $task-font-stack;
     font-size: 12px;
-    overflow: hidden;
+    line-height: 15.7px;
   }
 }
 
@@ -203,7 +290,7 @@
 
 .box {
   display: none;
-  overflow: hidden;
+  margin-bottom: 20px;
   border-radius: 5px;
   color: #ffffff;
   font-size: 18px;
@@ -214,13 +301,17 @@
     background-color: $background-ingredient-color;
   }
 
+  &-ingredient {
+    margin-right: 20px;
+  }
+
   &-device,
   &-device input {
     background-color: $background-device-color;
   }
 
   &-device {
-    margin: 0 20px;
+    margin-right: 20px;
   }
 
   &-utensil,
@@ -232,6 +323,10 @@
     @extend %flex-between;
     height: 69px;
     padding: 0 20px;
+
+    @include md {
+      height: 50px;
+    }
 
     input {
       width: 85%;
@@ -275,42 +370,7 @@
     }
   }
 
-  // - Projet error message
-  // .error {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-around;
-  //   width: 100%;
-
-  //   &::after {
-  //     font-family: "Font Awesome 5 Free";
-  //     font-weight: 900;
-  //     content: "\f119";
-  //     font-size: 30px;
-  //   }
-  // }
 }
-
-// - Projet texture
-// .texture-content {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 60vh;
-//   margin-top: 20px;
-//   border-radius: 5px;
-//   overflow: hidden;
-
-//   &__img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-
-//   p {
-//     position: absolute;
-//   }
-// }
 
 // * End
 // * ------------------------

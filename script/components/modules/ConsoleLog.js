@@ -38,4 +38,5 @@ export const logFullRefine = (refineRecipesFound, refineIngredientList, refineDe
   console.log('Ustensiles mis à jour:', refineUtensilList);
 };
 
-// ********************************************************
+// * END
+// ****************

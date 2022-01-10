@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 @import 
-'abstracts/variables';
-//  'abstracts/mixins',
+'abstracts/variables',
+'abstracts/mixins';
 
 @import 
   'vendors/minireset';
@@ -14,9 +14,6 @@
   'base/base',
   'base/fonts',
   'base/typography';
-
-//@import
-//  'animations/';
 
 @import 
   'layout/page';

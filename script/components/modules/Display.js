@@ -1,14 +1,82 @@
 // ********************************************************
 
-const calculateHeightList = (array) => {
-  let len = array.length;
-  if (len > 0) {
-    while (len % 3 !== 0) {
-      len++;
-    }
-    return ((len / 3) * 32) + 20;
+const addJsOpenClassToButton = () => {
+  document.querySelectorAll('button').forEach(e => {
+    e.classList.add('js-open');
+  });
+};
+
+// ==========================
+
+const openList = (button, box) => {
+  button.style.display = 'none';
+  box.style.display = 'initial';
+  button.classList.remove('js-open');
+};
+
+// ==========================
+
+const closeList = (button, box) => {
+  const page = document.querySelector('.page');
+  const selectForClose = '.main, .js-open, .fa-chevron-up, .search-bar, .header, .tags-row, .li';
+  const NodesForClose = Array.from(page.querySelectorAll(selectForClose));
+  NodesForClose.forEach(e => {
+    e.addEventListener('click', () => {
+      button.style.display = 'flex';
+      box.style.display = 'none';
+    });
+  });
+};
+
+// ==========================
+
+const setListWidth = (list, array) => {
+  if (array.length === 0) {
+    list.style.paddingBottom = '0';
+    list.style.width = '300px';
+  } else if (array.length === 1 || window.innerWidth <= 1029) {
+    list.style.paddingBottom = '20px';
+    list.style.width = '300px';
+  } else if (array.length === 2 || (window.innerWidth <= 1249 && window.innerWidth > 1029)) {
+    list.style.paddingBottom = '20px';
+    list.style.width = '450px';
   } else {
-    return 0;
+    list.style.paddingBottom = '20px';
+    list.style.width = '670px';
+  }
+};
+
+// ==========================
+
+const setHeightList = (list, array) => {
+  let len = array.length;
+  if (window.innerWidth <= 1249 && window.innerWidth > 1029) {
+    if (len > 0) {
+      while (len % 2 !== 0) {
+        len++;
+      }
+      list.style.height = `${((len / 2) * 32) + 20}px`;
+    } else {
+      list.style.height = `${0}px`;
+    }
+  } else if (window.innerWidth <= 1029) {
+    if (len > 0) {
+      while (len % 1 !== 0) {
+        len++;
+      }
+      list.style.height = `${((len / 1) * 32) + 20}px`;
+    } else {
+      list.style.height = `${0}px`;
+    }
+  } else {
+    if (len > 0) {
+      while (len % 3 !== 0) {
+        len++;
+      }
+      list.style.height = `${((len / 3) * 32) + 20}px`;
+    } else {
+      list.style.height = `${0}px`;
+    }
   }
 };
 
@@ -49,54 +117,40 @@ const displayList = (whereToInject, array) => {
 
 // ==========================
 
+const setMainTop = () => {
+  const position = document.querySelector('div.buttons-row').getBoundingClientRect();
+  if (window.innerWidth <= 928 && window.innerWidth > 589) {
+    document.querySelector('main.main').style.top = `${position.top + 74}px`;
+  } else if (window.innerWidth <= 589 && window.innerWidth > 399) {
+    document.querySelector('main.main').style.top = `${position.top + 143}px`;
+  } else if (window.innerWidth <= 399) {
+    document.querySelector('main.main').style.top = `${position.top + 212}px`;
+  } else {
+    document.querySelector('main.main').style.top = `${position.top + 93}px`;
+  }
+};
+
+// ==========================
+
 export const displayItemBoxes = (button, box, list, array) => {
 
   button.addEventListener('click', () => {
 
-    // Ajout de classe # à tous les boutons
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach(e => {
-      e.classList.add('js-open');
-    });
+    addJsOpenClassToButton();
 
-    // Ouverture des listes au click sur bouton
-    button.style.display = 'none';
-    box.style.display = 'initial';
-    button.classList.remove('js-open');
+    openList(button, box);
 
-    // Définition des zones de click pour fermeture des listes 
-    const page = document.querySelector('.page');
-    const selectForClose = '.main, .page, .js-open, .fa-chevron-up, .search-bar, .header, .tags-row, .li';
-    const NodesForClose = Array.from(page.querySelectorAll(selectForClose));
-
-    // Fermeture des listes ...
-    NodesForClose.forEach(e => {
-      e.addEventListener('click', () => {
-        button.style.display = 'flex';
-        box.style.display = 'none';
-      });
-    });
+    closeList(button, box);
 
   });
 
-  // Mise en page des liste selon le nombre de résultat
-  if (array.length === 0) {
-    list.style.paddingBottom = '0';
-    list.style.width = '300px';
-  } else if (array.length <= 1) {
-    list.style.paddingBottom = '20px';
-    list.style.width = '300px';
-  } else if (array.length === 2) {
-    list.style.paddingBottom = '20px';
-    list.style.width = '450px';
-  } else {
-    list.style.paddingBottom = '20px';
-    list.style.width = '670px';
-  }
+  setListWidth(list, array);
 
-  // Calcul de la hauteur de la lise et affichage
-  list.style.height = `${calculateHeightList(array)}px`;
+  setHeightList(list, array);
+
   displayList(list, array);
+
+  setMainTop();
 
 };
 
@@ -108,9 +162,11 @@ const displayIngredients = (recipe) => {
     ingredientsList += `
   <p class="li">
   ${recipe.ingredients[i].ingredient}
+  <span class="quantity">
   ${recipe.ingredients[i].quantity !== undefined ? ':&nbsp' : ''}
   ${recipe.ingredients[i].quantity !== undefined ? recipe.ingredients[i].quantity : ''} 
-  ${recipe.ingredients[i].unit !== undefined ? recipe.ingredients[i].unit : ''} 
+  ${recipe.ingredients[i].unit !== undefined ? recipe.ingredients[i].unit : ''}
+  </span>
   </p>`;
   }
   return ingredientsList;
@@ -186,29 +242,5 @@ export const displayTags = (element, array) => {
   }
 };
 
-// ********************************************************
-
-const checkLength = (list) => {
-  if (list.length !== 0) {
-    return 1;
-  } else {
-    return 0;
-  }
-};
-
-// ==========================
-
-export const setMainTop = (node, tagStockIngredient, tagStockDevice, tagStockUtensil) => {
-  const numberOfTagRow = checkLength(tagStockIngredient) + checkLength(tagStockDevice) + checkLength(tagStockUtensil);
-  if (numberOfTagRow === 0) {
-    node.style.top = '340px';
-  } else if (numberOfTagRow === 1) {
-    node.style.top = '390px';
-  } else if (numberOfTagRow === 2) {
-    node.style.top = '443px';
-  } else if (numberOfTagRow === 3) {
-    node.style.top = '495px';
-  }
-};
-
-// ********************************************************
+// * END
+// ****************

@@ -70,4 +70,5 @@ export const updateRecipesByRemainingTag = (tagStockIngredient, tagStockDevice, 
   return recipesAfterCloseTag;
 };
 
-// ********************************************************
+// * END
+// ****************
