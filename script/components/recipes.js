@@ -37,7 +37,7 @@ export const recipes =
     'name': 'Poisson Cru à la tahitienne',
     'servings': 2,
     'ingredients': [{
-        'ingredient': 'Thon rouge (ou blanc)',
+        'ingredient': 'Thon rouge ou blanc',
         'quantity': 200,
         'unit': 'grammes'
       },
@@ -856,7 +856,7 @@ export const recipes =
         'unit': 'grammes'
       },
       {
-        'ingredient': 'Chocolat noir (pépites)',
+        'ingredient': 'Chocolat noir en pépites',
         'quantity': 100,
         'unit': 'grammes'
       },

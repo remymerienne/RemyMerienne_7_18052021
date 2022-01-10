@@ -103,9 +103,6 @@ export const mainAlgorithm = () => {
     // Suppression visuelle des tags si modification de la recherche principale
     document.querySelectorAll('div.tags-row__tag').forEach((e) => e.style.display = 'none');
 
-    // Placement du block principal
-    // setMainTop(mainContentBlock, tagStockIngredient, tagStockDevice, tagStockUtensil);
-
     // = Display console
     console.clear();
     console.log('Toutes les recettes:', recipes);

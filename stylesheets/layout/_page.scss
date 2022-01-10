@@ -52,6 +52,10 @@
     row-gap: 20px;
   }
 
+  @include xxs {
+    margin-right: 10px;
+  }
+
 }
 
 // * End
