@@ -1,0 +1,38 @@
+{
+	"folders": [
+    {
+      "name": "Les petits plats",
+      "path": "../Downloads/Working/RemyMerienne_7_18052021"
+    }
+  ],
+
+  "settings": {
+
+    "liveServer.settings.multiRootWorkspaceName": "Les petits plats",
+    "liveServer.settings.port": 5500,
+
+    "restoreTerminals.terminals": [
+      
+      {  
+        "splitTerminals": [
+          {
+            "name": "build",
+            "commands": ["npm run build"]
+          }
+        ]
+      },
+
+      {
+        "splitTerminals": [
+          {
+            "name": "sassIndex",
+            "commands": ["npm run sassindex"]
+          }
+        ]
+      }
+
+    ]
+
+  }
+  
+}

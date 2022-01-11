@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// * This file contains very basic layouts.
+// -----------------------------------------------------------------------------
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: 100%;
+  max-width: $page-max-width;
+  padding: 42px 100px;
+
+  @include md {
+    padding: 20px;
+  }
+
+  @include xxs {
+    padding: 10px;
+  }
+}
+
+.main {
+
+  margin-right: 100px;
+  position: absolute;
+  max-width: 1240px;
+  z-index: -1;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3.5%;
+  row-gap: 43px;
+  padding-bottom: 30px;
+
+  @include xl {
+    row-gap: 33px;
+  }
+
+  @include lg {
+    column-gap: 10%;
+  }
+
+  @include md {
+    column-gap: 5%;
+    margin-right: 20px;
+  }
+
+  @include sm {
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+  @include xxs {
+    margin-right: 10px;
+  }
+
+}
+
+// * End
+// * ------------------------

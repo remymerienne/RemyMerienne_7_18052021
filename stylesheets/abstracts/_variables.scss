@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// * This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// ================MENU================
+// - 1. Lengths
+// - 2. Colors
+// - 3. Fonts
+// - 4. Breakpoints map
+// ====================================
+
+// - 1. Lengths
+// --------------------------
+
+/// Page maximum width ********************
+/// @type Length
+$page-max-width: 1440px;
+
+// - 2. Colors
+// --------------------------
+
+/// Title color **********************
+/// @type Color
+$title-color: #d04f4f;
+
+///  Background light color **********************
+/// @type Color
+$background-light-color: #e7e7e7;
+
+///  Background dark color **********************
+/// @type Color
+$background-dark-color: #c7bebe;
+
+///  Background ingredient color **********************
+/// @type Color
+$background-ingredient-color: #3282f7;
+
+///  Background device color **********************
+/// @type Color
+$background-device-color: #68d9a4;
+
+///  Background utensil color **********************
+/// @type Color
+$background-utensil-color: #ed6454;
+
+// - 3. Fonts
+// --------------------------
+
+/// Title font family *************************
+/// @type List
+$title-font-stack: (
+  'DM Sans', 
+  sans-serif
+);
+
+/// Objects font family *************************
+/// @type List
+$objects-font-stack: (
+  'Lato', 
+  sans-serif
+);
+
+/// Task font family *************************
+/// @type List
+$task-font-stack: (
+  'Roboto',
+  sans-serif
+);
+
+// - 4. Breakpoints map
+// --------------------------
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'xl': 1332px,
+  'lg': 1258px,
+  'md': 928px,
+  'sm': 730px,
+  'xs': 589px,
+  'xxs': 374px
+  );
+
+// * End
+// * ------------------------

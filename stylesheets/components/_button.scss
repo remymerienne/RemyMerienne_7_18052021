@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// * This file contains styles that are specific to the buttons.
+// -----------------------------------------------------------------------------
+
+.buttons-row__button {
+  @extend %flex-between;
+  width: 170px;
+  height: 69px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+
+  @include md {
+    height: 50px;
+  }
+}
+
+// * End
+// * ------------------------

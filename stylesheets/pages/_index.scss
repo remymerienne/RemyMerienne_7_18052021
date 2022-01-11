@@ -1,0 +1,376 @@
+// -----------------------------------------------------------------------------
+// * This file contains styles that are specific to the index page.
+// -----------------------------------------------------------------------------
+
+// ================MENU================
+// - 1. Header
+// - 2. Search bar
+// - 3. Tags row
+// - 4. Buttons row
+// - 5. Cooking recipe
+// =    a. Box layout
+// =    b. Title and time layout
+// =    c. Ingredients and tasks layout
+// - 6. Item Boxes
+// ====================================
+
+// - 1. Header
+// --------------------------
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    width: 50px;
+
+    @include md {
+      height: 35px;
+    }
+  }
+
+  &__title {
+    padding: 5px;
+    color: $title-color;
+    font-family: $title-font-stack;
+    font-size: 36px;
+    font-weight: 700;
+
+    @include md {
+      font-size: 30px;
+    }
+  }
+}
+
+// - 2. Search bar
+// --------------------------
+
+.search-bar {
+  @extend %flex-between;
+  height: 69px;
+  margin-bottom: 5px;
+  margin-top: 17px;
+  padding: 20px;
+  background-color: $background-light-color;
+  border-radius: 5px;
+
+  @include md {
+    height: 50px;
+  }
+
+  &__input {
+    width: 95%;
+    height: 50px;
+    background-color: $background-light-color;
+    color: #000000;
+    font-size: 18px;
+    text-overflow: ellipsis;
+
+    &::placeholder {
+      color: #000000;
+      opacity: 0.25;
+    }
+  }
+
+  &__logo {
+    font-size: 32px;
+
+    @include md {
+      font-size: 25px;
+    }
+  }
+}
+
+// - 3. Tags row
+// --------------------------
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__tag--ingredient {
+    background-color: $background-ingredient-color;
+  }
+
+  &__tag--device {
+    background-color: $background-device-color;
+  }
+
+  &__tag--utensil {
+    background-color: $background-utensil-color;
+  }
+
+  .fa-times-circle {
+    margin-left: 15px;
+    font-size: 20px;
+  }
+}
+
+// - 4. Buttons row
+// --------------------------
+
+.buttons-row {
+  display: flex;
+  margin-top: 15px;
+  flex-wrap: wrap;
+
+  &__button--ingredient {
+    margin-right: 20px;
+    background-color: $background-ingredient-color;
+  }
+
+  &__button--device {
+    margin-right: 20px;
+    background-color: $background-device-color;
+  }
+
+  &__button--utensil {
+    background-color: $background-utensil-color;
+  }
+
+  .fa-chevron-down {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+}
+
+// - 5. Cooking recipe
+// --------------------------
+
+// = a. Box layout
+// ==========================
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  min-width: 328px;
+  height: 364px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @include lg {
+    width: 45%;
+  }
+
+  @include md {
+    width: 47.5%;
+  }
+
+  @include sm {
+    width: 65%;
+  }
+
+  @include xs {
+    width: 100%;
+  }
+
+  @include xxs {
+    min-width: unset;
+  }
+
+  &__photo {
+    height: 178px;
+    background-color: $background-dark-color;
+  }
+
+  &__details {
+    height: 186px;
+    padding: 20px;
+    background-color: $background-light-color;
+
+    @include xxs {
+      padding: 10px;
+    }
+  }
+}
+
+// = b. Title and time layout
+// ==========================
+
+.high-group-recipe {
+  @extend %flex-between;
+  align-items: flex-start;
+  height: 45px;
+
+  &__title {
+    font-size: 18px;
+
+    @include xl {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &__time,
+  &__time::after {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__time {
+    @include xl {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+    }
+  }
+
+  &__time::before {
+    margin-left: 10px;
+    margin-right: 7px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f017";
+    font-size: 20px;
+
+    @include xl {
+      font-size: 15px;
+    }
+
+    @include xxs {
+      margin-left: 5px;
+    }
+  }
+
+  &__time::after {
+    margin-left: 5px;
+    content: 'min';
+
+    @include xl {
+      font-size: 15px;
+    }
+  }
+}
+
+// = c. Ingredients and tasks layout
+// ==========================
+
+.low-group-recipe {
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    width: 50%;
+    height: 100px;
+    padding-right: 20px;
+    padding-top: 5px;
+    overflow: hidden;
+    line-height: 16px;
+  }
+
+  .li {
+    font-size: 12px;
+    font-weight: 700;
+
+    .quantity {
+      font-weight: 400;
+    }
+  }
+
+  &__task {
+    width: 50%;
+    height: 100px;
+    padding-top: 5px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+
+    font-family: $task-font-stack;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+// - 6. Item boxes
+// --------------------------
+
+.box {
+  display: none;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+
+  &-ingredient,
+  &-ingredient input {
+    background-color: $background-ingredient-color;
+  }
+
+  &-ingredient {
+    margin-right: 20px;
+  }
+
+  &-device,
+  &-device input {
+    background-color: $background-device-color;
+  }
+
+  &-device {
+    margin-right: 20px;
+  }
+
+  &-utensil,
+  &-utensil input {
+    background-color: $background-utensil-color;
+  }
+
+  &__search {
+    @extend %flex-between;
+    height: 69px;
+    padding: 0 20px;
+
+    @include md {
+      height: 50px;
+    }
+
+    input {
+      width: 85%;
+      height: 50px;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+
+      &::placeholder {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        opacity: 0.5;
+      }
+    }
+
+    .fa-chevron-up {
+      margin-right: 10px;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.70;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    column-gap: 3%;
+    padding: 0 20px 20px 20px;
+    cursor: pointer;
+
+    .li {
+      margin-top: 10px;
+
+      &:hover {
+        opacity: 0.70;
+      }
+    }
+  }
+
+}
+
+// * End
+// * ------------------------
