@@ -15,10 +15,6 @@ Projet N°7 du parcours _Développeur Front-End_ [OpenClassrooms](https://opencl
 
 ***
 
-<p align="center">
-<img alt="titre les petits plats" src="./supply/images/headerPourPDF.png" width="200">
-</p>
-
 - [1. Les petit plats](#1-les-petit-plats)
   - [1.1. Premier algorithme (boucles natives)](#11-premier-algorithme-boucles-natives)
   - [1.2. Deuxième algorithme (Array method)](#12-deuxième-algorithme-array-method)
@@ -32,10 +28,11 @@ Projet N°7 du parcours _Développeur Front-End_ [OpenClassrooms](https://opencl
 
 ## 1.1. Premier algorithme (boucles natives)
 
-Afin d'organiser au mieux la gestion des tâches, le projet a été initialisé avec **Git-flow**.  
-Le premier algorithme a donc été développé dans la branche [***search-by-loop-algorithm***](https://github.com/remymerienne/RemyMerienne_7_18052021/tree/feature/search-by-loop-algorithm) qui est la seule à ne pas avoir été _mergée_, cette solution n'ayant pas été retenue.
+Afin d'organiser au mieux la gestion des tâches, le projet a été initialisé avec **Git-flow**.
 
-L'algorithme [***mainAlgorithm.js***](https://github.com/remymerienne/RemyMerienne_7_18052021/blob/feature/search-by-loop-algorithm/script/components/mainAlgorithm.js) est fonctionnel pour la recherche principale, l'affichage (non responsive) des recettes et la mise à jour des listes d'ingrédients, d'appareils et d'ustensiles.
+Le premier algorithme a été développé dans la branche [***search-by-loop-algorithm***](https://github.com/remymerienne/RemyMerienne_7_18052021/tree/feature/search-by-loop-algorithm) qui est la seule à ne pas avoir été _mergée_, cette solution n'ayant pas été retenue.
+
+L'algorithme [***mainAlgorithm.js***](https://github.com/remymerienne/RemyMerienne_7_18052021/blob/feature/search-by-loop-algorithm/script/components/mainAlgorithm.js) est fonctionnel pour la recherche principale, l'affichage des recettes et la mise à jour des listes d'ingrédients, d'appareils et d'ustensiles.
 
 ***
 
@@ -45,8 +42,9 @@ Cet algorithme (utilisé pour la version v1.0.0) est pleinement fonctionnel.
 - Recherche principale
 - Affinage de la recherche avec saisie préalable dans les listes d'ingrédients, d'appareils et d'ustensiles
 - Affinage de la recherche grâce à la selection directe d'un item dans les listes d'ingrédients, d'appareils et d'ustensiles
-- Affiche full responsive
+- Affichage full responsive
 - Code CSS et HTML valide **W3C**
+- Compatible **Chrome - Firefox - Safari**
 
 ***
 
@@ -56,7 +54,7 @@ Afin d'assurer un résultat fiable du benchmark, le test des deux modes de reche
 Nous simulons la recherche du mot 'Crème' et allons rechercher des correspondances dans les noms de recettes, dans les descriptions et dans les ingrédients.  
 Les recettes sélectionnées seront triées par ordre alphabétique et stockées dans un tableau nommé `recipesFound`.
 
-C'est sur le site [***jsbench.ch***](https://jsben.ch/) que le test a été effectué.
+C'est sur le site [***jsbench.ch***](https://jsben.ch) que le test a été effectué.
 
 ### 1.3.1. Données communes
 
@@ -183,6 +181,8 @@ Algorigramme :
 L'algorithme de recherche développé avec les méthodes de l'objet `Array` s'avère plus performant de 13.6% avec un score de 6167 opérations/s contre 5328 o/s pour le premier algorithme.
 
 <img alt="Algorigramme méthode array" src="./supply/images/capture-bench.png" width="500">
+
+_Lien vers le Benchmark [***jsben.ch/ljCOX***](https://jsben.ch/ljCOX)_
 
 _Voir [**Fiche d'inverstigation de fonctionnalité**](./supply/algorigramme/Fiche-investigation.pdf)_
 
