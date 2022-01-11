@@ -437,7 +437,7 @@ input {
   padding-right: 20px;
   padding-top: 5px;
   overflow: hidden;
-  line-height: 15.7px;
+  line-height: 16px;
 }
 .low-group-recipe .li {
   font-size: 12px;
@@ -456,7 +456,7 @@ input {
   overflow: hidden;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  line-height: 15.7px;
+  line-height: 16px;
 }
 
 .box {

@@ -120,14 +120,15 @@ const displayList = (whereToInject, array) => {
 const setMainTop = () => {
   const position = document.querySelector('div.buttons-row').getBoundingClientRect();
   if (window.innerWidth <= 928 && window.innerWidth > 589) {
-    document.querySelector('main.main').style.top = `${position.top + 74}px`;
+    document.querySelector('main.main').style.top = `${window.pageYOffset + position.top + 74}px`;
   } else if (window.innerWidth <= 589 && window.innerWidth > 399) {
-    document.querySelector('main.main').style.top = `${position.top + 143}px`;
+    document.querySelector('main.main').style.top = `${window.pageYOffset + position.top + 143}px`;
   } else if (window.innerWidth <= 399) {
-    document.querySelector('main.main').style.top = `${position.top + 212}px`;
+    document.querySelector('main.main').style.top = `${window.pageYOffset + position.top + 212}px`;
   } else {
-    document.querySelector('main.main').style.top = `${position.top + 93}px`;
+    document.querySelector('main.main').style.top = `${window.pageYOffset + position.top + 93}px`;
   }
+  window.scrollTo(0,0);
 };
 
 // ==========================
