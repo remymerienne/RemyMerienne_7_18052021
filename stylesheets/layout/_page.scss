@@ -22,12 +22,6 @@
 }
 
 .main {
-
-  margin-right: 100px;
-  position: absolute;
-  max-width: 1240px;
-  z-index: -1;
-
   display: flex;
   flex-wrap: wrap;
   column-gap: 3.5%;
@@ -44,18 +38,27 @@
 
   @include md {
     column-gap: 5%;
-    margin-right: 20px;
   }
 
   @include sm {
     justify-content: center;
     row-gap: 20px;
   }
+}
+
+.js-absolute {
+  margin-right: 100px;
+  position: absolute;
+  max-width: 1240px;
+  z-index: -1;
+
+  @include md {
+    margin-right: 20px;
+  }
 
   @include xxs {
     margin-right: 10px;
   }
-
 }
 
 // * End

@@ -12,20 +12,75 @@ const openList = (button, box) => {
   button.style.display = 'none';
   box.style.display = 'initial';
   button.classList.remove('js-open');
+  document.querySelector('main').classList.add('js-absolute');
 };
 
 // ==========================
 
 const closeList = (button, box) => {
+
   const page = document.querySelector('.page');
-  const selectForClose = '.main, .js-open, .fa-chevron-up, .search-bar, .header, .tags-row, .li';
+  const selectForClose = '.main, .js-open, .fa-chevron-up, .search-bar, .header, .tags-row, ul';
   const NodesForClose = Array.from(page.querySelectorAll(selectForClose));
+
   NodesForClose.forEach(e => {
     e.addEventListener('click', () => {
       button.style.display = 'flex';
       box.style.display = 'none';
     });
   });
+
+};
+
+// ==========================
+
+const setMainTop = () => {
+
+  const position = document.querySelector('div.buttons-row').getBoundingClientRect();
+  const main = document.querySelector('main.main');
+  const isAbsolute = main.classList.contains('js-absolute');
+
+  if (window.innerWidth > 928 && isAbsolute === true) {
+    main.style.top = `${window.pageYOffset + position.top + 89}px`;
+  } else if (window.innerWidth <= 928 && window.innerWidth > 589 && isAbsolute === true) {
+    main.style.top = `${window.pageYOffset + position.top + 70}px`;
+  } else if (window.innerWidth <= 589 && window.innerWidth > 399 && isAbsolute === true) {
+    main.style.top = `${window.pageYOffset + position.top + 140}px`;
+  } else if (window.innerWidth <= 399 && isAbsolute === true) {
+    main.style.top = `${window.pageYOffset + position.top + 210}px`;
+  }
+
+};
+
+// ==========================
+
+const switchToInitialPosition = () => {
+
+  const page = document.querySelector('.page');
+  const selectForSwitch = '.main, .fa-chevron-up, .search-bar, .header, .tags-row, ul';
+  const NodesForSwitch = Array.from(page.querySelectorAll(selectForSwitch));
+
+  NodesForSwitch.forEach(e => {
+    e.addEventListener('click', () => {
+      document.querySelector('main').classList.remove('js-absolute');
+      document.querySelector('main').style.top = 'initial';
+    });
+  });
+
+};
+
+// ==========================
+
+const scrollToTop = () => {
+
+  const items = document.querySelectorAll('ul');
+
+  items.forEach(e => {
+    e.addEventListener('click', () => {
+      window.scrollTo(0, 0);
+    });
+  });
+
 };
 
 // ==========================
@@ -117,22 +172,6 @@ const displayList = (whereToInject, array) => {
 
 // ==========================
 
-const setMainTop = () => {
-  const position = document.querySelector('div.buttons-row').getBoundingClientRect();
-  if (window.innerWidth <= 928 && window.innerWidth > 589) {
-    document.querySelector('main.main').style.top = `${window.pageYOffset + position.top + 74}px`;
-  } else if (window.innerWidth <= 589 && window.innerWidth > 399) {
-    document.querySelector('main.main').style.top = `${window.pageYOffset + position.top + 143}px`;
-  } else if (window.innerWidth <= 399) {
-    document.querySelector('main.main').style.top = `${window.pageYOffset + position.top + 212}px`;
-  } else {
-    document.querySelector('main.main').style.top = `${window.pageYOffset + position.top + 93}px`;
-  }
-  window.scrollTo(0,0);
-};
-
-// ==========================
-
 export const displayItemBoxes = (button, box, list, array) => {
 
   button.addEventListener('click', () => {
@@ -143,15 +182,19 @@ export const displayItemBoxes = (button, box, list, array) => {
 
     closeList(button, box);
 
+    setMainTop();
+
+    switchToInitialPosition();
+
   });
+
+  scrollToTop();
 
   setListWidth(list, array);
 
   setHeightList(list, array);
 
   displayList(list, array);
-
-  setMainTop();
 
 };
 
@@ -241,6 +284,7 @@ export const displayTags = (element, array) => {
       ).join('')
     );
   }
+
 };
 
 // * END
