@@ -135,10 +135,6 @@ input {
 }
 
 .main {
-  margin-right: 100px;
-  position: absolute;
-  max-width: 1240px;
-  z-index: -1;
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 3.5%;
@@ -161,7 +157,6 @@ input {
   .main {
     -moz-column-gap: 5%;
          column-gap: 5%;
-    margin-right: 20px;
   }
 }
 @media screen and (max-width: 730px) {
@@ -170,8 +165,20 @@ input {
     row-gap: 20px;
   }
 }
+
+.js-absolute {
+  margin-right: 100px;
+  position: absolute;
+  max-width: 1240px;
+  z-index: -1;
+}
+@media screen and (max-width: 928px) {
+  .js-absolute {
+    margin-right: 20px;
+  }
+}
 @media screen and (max-width: 374px) {
-  .main {
+  .js-absolute {
     margin-right: 10px;
   }
 }
