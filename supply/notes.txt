@@ -7,19 +7,7 @@ Liens du projet :
 
 *******************************************************************************
 
-XzYQ4i
-
-*******************************************************************************
-
-Etapes du projet :
-------------------
-# 1 Développer les bases du design
-# 2 Définir 2 modes de fonctionnement pour l'algorithme (faire 2 algorigrammes)
-    a - Un basée sur les boucles
-    b - Un sur les méthodes d'objet array (voir les MAP)
-  Se baser sur la fiche 'Cas d'utilisation'
-# 3 Développer les 2 algorithmes sur des branches distinctes
-# 4 Compléter fiche d’investigation de fonctionnalité pour comparer les 2 algorithmes de recherche (benchmark)
+purgecss --css css/*.css --content index.html dist/main.bundle.js -o dist
 
 *******************************************************************************
 
@@ -33,15 +21,5 @@ To Do List :
 - font-display: swap;
 - Semantic markup
 - Sélection d'une recette
-
-*******************************************************************************
-
-Session M :
-------------
-
-*******************************************************************************
-
-Next commit :
--------------
 
 *******************************************************************************
