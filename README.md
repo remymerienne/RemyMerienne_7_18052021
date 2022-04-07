@@ -2,31 +2,46 @@
 
 Projet N°7 du parcours _Développeur Front-End_ [OpenClassrooms](https://openclassrooms.com/fr/).
 
+Les Petits Plats est une application de recettes de cuisine permettant une recherche par ingrédients, par appareils ménager et/ou par ustensiles dont vous pouvez disposer.
 
+Lien vers le site : 
+[*Les Petits Plats*](https://remymerienne.github.io/RemyMerienne_7_18052021/)
+
+***
 
 <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"><img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"><img alt="JavaSript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
-<img alt="GIT" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"><img alt="GIhub" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"><img alt="GITKRAKEN" src="https://img.shields.io/badge/GitKraken-179287?style=for-the-badge&logo=GitKraken&logoColor=white">
+<img alt="GIT" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"><img alt="GIhub" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"><img alt="GITKRAKEN" src="https://img.shields.io/badge/GitKraken-179287?style=for-the-badge&logo=GitKraken&logoColor=white">![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
 
-<img alt="webpack" src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white"><img alt="babel" src="https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white"><img alt="ESLint" src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"><img alt="sass" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)<img alt="webpack" src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white"><img alt="babel" src="https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white"><img alt="ESLint" src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"><img alt="sass" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
 
-<img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
+<img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
+
+![FontAwesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
+
+## 1.1. Développer un algorithme de recherche en JavaScript
+
+- Analyser un problème informatique
+- Développer un algorithme pour résoudre un problème
+
+L'application a été réalisée en HTML5, CSS3 et JavaScript sans framework ni librairie.
 
 ***
 
 - [1. Les petit plats](#1-les-petit-plats)
-  - [1.1. Premier algorithme (boucles natives)](#11-premier-algorithme-boucles-natives)
-  - [1.2. Deuxième algorithme (Array method)](#12-deuxième-algorithme-array-method)
-  - [1.3. Benchmark](#13-benchmark)
-    - [1.3.1. Données communes](#131-données-communes)
-    - [1.3.2. Boucles natives](#132-boucles-natives)
-    - [1.3.3. Méthode d'objet Array](#133-méthode-dobjet-array)
-    - [1.3.4. Résultat du benchmark](#134-résultat-du-benchmark)
+  - [1.1. Développer un algorithme de recherche en JavaScript](#11-développer-un-algorithme-de-recherche-en-javascript)
+    - [1.1.1. Premier algorithme (boucles natives)](#111-premier-algorithme-boucles-natives)
+    - [1.1.2. Deuxième algorithme (Array method)](#112-deuxième-algorithme-array-method)
+    - [1.1.3. Benchmark](#113-benchmark)
+      - [1.1.3.1. Données communes](#1131-données-communes)
+      - [1.1.3.2. Boucles natives](#1132-boucles-natives)
+      - [1.1.3.3. Méthode d'objet Array](#1133-méthode-dobjet-array)
+      - [1.1.3.4. Résultat du benchmark](#1134-résultat-du-benchmark)
 
 ***
 
-## 1.1. Premier algorithme (boucles natives)
+### 1.1.1. Premier algorithme (boucles natives)
 
 Afin d'organiser au mieux la gestion des tâches, le projet a été initialisé avec **Git-flow**.
 
@@ -36,7 +51,7 @@ L'algorithme [***mainAlgorithm.js***](https://github.com/remymerienne/RemyMerien
 
 ***
 
-## 1.2. Deuxième algorithme (Array method)
+### 1.1.2. Deuxième algorithme (Array method)
 
 Cet algorithme (utilisé pour la version v1.0.0) est pleinement fonctionnel.
 - Recherche principale
@@ -48,7 +63,7 @@ Cet algorithme (utilisé pour la version v1.0.0) est pleinement fonctionnel.
 
 ***
 
-## 1.3. Benchmark
+### 1.1.3. Benchmark
 
 Afin d'assurer un résultat fiable du benchmark, le test des deux modes de recherche a été standardisé.  
 Nous simulons la recherche du mot 'Crème' et allons rechercher des correspondances dans les noms de recettes, dans les descriptions et dans les ingrédients.  
@@ -56,7 +71,7 @@ Les recettes sélectionnées seront triées par ordre alphabétique et stockées
 
 C'est sur le site [***jsbench.ch***](https://jsben.ch) que le test a été effectué.
 
-### 1.3.1. Données communes
+#### 1.1.3.1. Données communes
 
 Le premier block contient les éléments communs aux deux algorithmes.
 
@@ -103,7 +118,7 @@ let recipesFound = [];
 
 _Notes : La saisie utilisateur est convertie en expression régulière car elle sera assignée à la méthode `match()` de l'objet `string`. Cette méthode a été choisie afin d'avoir une correspondance de recherche par mot-clé et non par partie incluse dans un mot qui isolément ne signifie rien._
 
-### 1.3.2. Boucles natives
+#### 1.1.3.2. Boucles natives
 
 La premiere modélisation concerne la version développée avec les boucles natives de **JavaScript**.
 
@@ -145,7 +160,7 @@ Algorigramme :
 
 <img alt="Algorigramme boucles natives" src="./supply/images/loop.png" width="400">
 
-### 1.3.3. Méthode d'objet Array
+#### 1.1.3.3. Méthode d'objet Array
 
 La deuxième modélisation concerne la version développée avec les méthodes de l'objet `Array` de **JavaScript**.
 
@@ -176,7 +191,7 @@ Algorigramme :
 
 <img alt="Algorigramme méthode array" src="./supply/images/array.png" width="400">
 
-### 1.3.4. Résultat du benchmark
+#### 1.1.3.4. Résultat du benchmark
 
 L'algorithme de recherche développé avec les méthodes de l'objet `Array` s'avère plus performant de 13.6% avec un score de 6167 opérations/s contre 5328 o/s pour le premier algorithme.
 
